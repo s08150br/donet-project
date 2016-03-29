@@ -1,0 +1,40 @@
+﻿@model IEnumerable<partialview.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="padding-top:74px;">Index</h2>
+
+
+@foreach (var item in Model)
+
+{
+    <table style="font-family:Arial; border:1px solid black; width:300px">
+        <tr>
+            <td>
+                <img src="~/images/3.jpg" alt="@item.AlternateText" />
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td><b>Age: </b> </td>
+                        <td>@item.Age</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td><b>Gender: </b> </td>
+                        <td>@item.Gender</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td><b>Weight: </b> </td>
+                        <td>@item.Salary</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+}
+
+
