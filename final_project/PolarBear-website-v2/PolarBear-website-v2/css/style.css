@@ -1,0 +1,199 @@
+/* COMMON PROPERTIES */
+body {
+    padding:10px 0;
+    margin:0;
+    font-size: 14pt;
+}
+html {
+    box-sizing: border-box;
+    position: relative;
+    height: 132px;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+.hidden {
+    left: -10000px;
+    line-height:0;
+    position: absolute;
+}
+.page-wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    /*max-width: 87rem;
+    margin: 23px 144px;*/
+}
+img {
+    width: 100%;
+}
+
+/* HEADER */
+#logo{
+    width: 73px;
+    /*width: 6%;*/
+}
+#mainNav {
+    font-family: 'Khand', sans-serif;
+    position: absolute;
+    right: 0;
+    top: 35px;
+}
+#mainNav ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
+#mainNav li {
+    display: inline-block;
+    list-style: none;
+}
+#mainNav a {
+    color: cornflowerblue;
+    padding: 0 17px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+#mainNav a:hover{
+    color:darkblue;
+    background-color: lightblue;
+}
+
+/* MAINPAGE */
+/* banner */
+#homepage #main .section .slogan1{
+    font-family: 'Khand', sans-serif;
+    font-size: 2.5rem;
+    display: inline;
+    color: #325075;
+    position: absolute;
+}
+#homepage #main .section .slogan2{
+    color: steelblue;
+    font-family: Vivaldi, "sans-serif";
+    font-size: 2rem;
+    /*padding: 0;
+    margin: 0;*/
+    display: inline;
+    /*color: #2B3C51;*/
+    position: absolute;
+}
+#homepage #banner1 .slogan1 {
+    left: 10%;
+    top: 16%;
+    /*left: 7rem;
+    top: 4rem;*/
+}
+#homepage #banner1 .slogan2 {
+    top: 30%;
+    left: 7%;
+    /*top: 7.5rem;
+    left: 6rem;*/
+}
+#homepage #main .section .btn {
+    font-family: Corbel, "sans-serif";
+    position: absolute;
+    bottom: 30%;
+    left: 22%;
+    /*bottom: 5.5rem;
+    left: 14rem;*/
+}
+#homepage #main .section .btn a {
+    text-decoration: none;
+    color: darkblue;
+    font-size: .625em;
+    padding: 0.5em;
+    font-weight: 400;
+    background-color: white;
+    border: 5px outset lightblue;
+}
+#homepage #main .section .btn a:hover{
+    color: white;
+    background-color: lightblue;
+    border: 5px solid white;
+}
+/* search bar */
+#homepage #main .search_bar {
+    font-size: 20px;
+    font-family: 'Khand', sans-serif;
+    padding: 0.4rem;
+    width: 90%;
+}
+#homepage #main .search_btn {
+    border: none;
+    padding: 0.5rem;
+    background-color: #11437F;
+    color: white;
+    font-size: 20px;
+    font-family: 'Khand', sans-serif;
+}
+#homepage #main .search_btn:hover{
+    cursor: pointer;
+    background-color: lightskyblue;
+    color: #325075;
+}
+
+/* FOOTER */
+.footer-wrapper {
+    max-width: 855px;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+/* columns */
+#footer #list h2 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+#footer #list ul {
+    display: inline-block;
+    vertical-align: text-top;
+    text-align: left;
+    padding: 0 1em;
+    margin: 0;
+}
+#footer #list li {
+    list-style: none;
+    font-family: 'Khand', sans-serif;
+    color:#2F527C;
+    line-height: 1em;
+}
+
+#footer #list li a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #2F527C;
+}
+#footer #list li a:hover{
+    color: lightskyblue;
+}
+
+/* copyright */
+#copyright {
+    font-family: 'Khand', sans-serif;
+    background-color: #6C7A8C;
+    color: white;
+    text-align: center;
+    font-size: 0.725em;
+    margin-top: 4em;
+}
+
+/* social media icons */
+.fa-3x {
+    color: cadetblue;
+    font-size: 3em;
+    margin: 4rem 2.5rem 0;
+}
+.fa-3x:hover{
+    color:lightskyblue;
+    cursor: pointer;
+}
+.icons p{
+    font-family: 'Khand', sans-serif;
+    font-size: 1.2rem;
+}
+.icons{
+    text-align: center;
+}
+
