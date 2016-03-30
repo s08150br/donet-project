@@ -89,6 +89,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\HDHDB.mdf" />
+    <Content Include="App_Data\HDHDB_log.ldf">
+      <DependentUpon>HDHDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\NotreDameDB.mdf" />
+    <Content Include="App_Data\NotreDameDB_log.ldf">
+      <DependentUpon>NotreDameDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -142,7 +150,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
