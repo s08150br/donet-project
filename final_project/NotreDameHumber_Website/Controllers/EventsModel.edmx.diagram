@@ -12,9 +12,9 @@
         <EntityTypeShape EntityType="Models.Doctor" Width="1.5" PointX="3.75" PointY="3.75" />
         <EntityTypeShape EntityType="Models.FAQ" Width="1.5" PointX="5.75" PointY="3.75" />
         <EntityTypeShape EntityType="Models.FeedBack" Width="1.5" PointX="3.75" PointY="6.75" />
-        <EntityTypeShape EntityType="Models.Job" Width="1.5" PointX="5.75" PointY="6.75" />
         <EntityTypeShape EntityType="Models.Parking" Width="1.5" PointX="0.75" PointY="7.75" />
         <EntityTypeShape EntityType="Models.NewsLetter" Width="1.5" PointX="6.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Models.tblWorker" Width="1.5" PointX="6.375" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

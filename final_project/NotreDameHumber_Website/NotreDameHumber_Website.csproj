@@ -187,9 +187,7 @@
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Job.cs">
-      <DependentUpon>EventsModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Controllers\JobPostController.cs" />
     <Compile Include="Controllers\NewsLetter.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -198,13 +196,18 @@
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\RegisterUserController.cs" />
+    <Compile Include="Controllers\tblWorker.cs">
+      <DependentUpon>EventsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\UserEventsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DBContext.cs" />
+    <Compile Include="Models\JopContext.cs" />
     <Compile Include="Models\Newsletter.cs" />
     <Compile Include="Models\NewsLetterContext.cs" />
+    <Compile Include="Models\Worker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -244,6 +247,11 @@
     <Content Include="Views\RegisterUser\Details.cshtml" />
     <Content Include="Views\RegisterUser\Edit.cshtml" />
     <Content Include="Views\RegisterUser\Index.cshtml" />
+    <Content Include="Views\JobPost\Index.cshtml" />
+    <Content Include="Views\JobPost\Create.cshtml" />
+    <Content Include="Views\JobPost\Edit.cshtml" />
+    <Content Include="Views\JobPost\Delete.cshtml" />
+    <Content Include="Views\JobPost\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

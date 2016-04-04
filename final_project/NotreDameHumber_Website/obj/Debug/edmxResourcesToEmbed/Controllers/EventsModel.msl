@@ -85,22 +85,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Jobs">
-      <EntityTypeMapping TypeName="Models.Job">
-        <MappingFragment StoreEntitySet="Job">
-          <ScalarProperty Name="Resume" ColumnName="Resume" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Pay" ColumnName="Pay" />
-          <ScalarProperty Name="FT_PT" ColumnName="FT_PT" />
-          <ScalarProperty Name="Shift" ColumnName="Shift" />
-          <ScalarProperty Name="Department" ColumnName="Department" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Location" ColumnName="Location" />
-          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
-          <ScalarProperty Name="JobId" ColumnName="JobId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Parkings">
       <EntityTypeMapping TypeName="Models.Parking">
         <MappingFragment StoreEntitySet="Parking">
@@ -119,6 +103,19 @@
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="lastName" ColumnName="lastName" />
           <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblWorkers">
+      <EntityTypeMapping TypeName="Models.tblWorker">
+        <MappingFragment StoreEntitySet="tblWorker">
+          <ScalarProperty Name="desciption" ColumnName="desciption" />
+          <ScalarProperty Name="pay" ColumnName="pay" />
+          <ScalarProperty Name="shift" ColumnName="shift" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="jobTitle" ColumnName="jobTitle" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
