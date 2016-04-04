@@ -5,12 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Event List</h2>
+<h2>Index</h2>
 
 @*<p>
     @Html.ActionLink("Create New", "Create")
-</p>*@
-@*<table class="table">
+</p>
+<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.EventName)
@@ -47,19 +47,21 @@
 
 @foreach (var item in Model)
 {
-<div class="listEvents">
-    <div class="row">
-        <div class="col-md-12 col-sm-12 col-sm-12">
-            <div class="btn btn-link">
-                @*<a href="#">*@
-                <h2>@Html.DisplayFor(modelItem => item.EventName)</h2>
-                <h3 class="pull-right">@Html.DisplayFor(modelItem => item.Date)</h3>
-                <p>@Html.DisplayFor(modelItem => item.Description)</p>
-                @*</a>*@
+
+    <div class="listEvents">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-sm-12">
+                <div class="btn btn-link">
+                    @*<a href="#">*@
+                    <h2>@Html.DisplayFor(modelItem => item.EventName)</h2>
+                    <h3 class="pull-right">@Html.DisplayFor(modelItem => item.Date)</h3>
+                    <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                    @Html.ActionLink("Register for Event", "Create", "UserEvents")
+                    @*</a>*@
+                </div>
             </div>
         </div>
     </div>
-</div>
     @*<tr>
         <td>
             @Html.DisplayFor(modelItem => item.EventName)
@@ -90,13 +92,13 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.EventWebsite)
-        </td>*@
-        @*<td>
+        </td>
+        <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.EventId }) |
             @Html.ActionLink("Details", "Details", new { id=item.EventId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.EventId })
-        </td>*@
-    @*</tr>*@
+        </td>
+    </tr>*@
 }
 
 @*</table>*@

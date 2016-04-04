@@ -197,8 +197,8 @@
     <Compile Include="Controllers\Parking.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\RegisterUserController.cs" />
     <Compile Include="Controllers\UserEventsController.cs" />
-
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -232,16 +232,6 @@
     <Content Include="Views\AdminEvents\Details.cshtml" />
     <Content Include="Views\AdminEvents\Edit.cshtml" />
     <Content Include="Views\AdminEvents\Index.cshtml" />
-    <Content Include="Views\Events\Create.cshtml" />
-    <Content Include="Views\Events\Delete.cshtml" />
-    <Content Include="Views\Events\Details.cshtml" />
-    <Content Include="Views\Events\Edit.cshtml" />
-    <Content Include="Views\Events\Index.cshtml" />
-    <Content Include="Views\Home\AdminEvents\Create.cshtml" />
-    <Content Include="Views\Home\AdminEvents\Delete.cshtml" />
-    <Content Include="Views\Home\AdminEvents\Details.cshtml" />
-    <Content Include="Views\Home\AdminEvents\Edit.cshtml" />
-    <Content Include="Views\Home\AdminEvents\Index.cshtml" />
     <Content Include="Views\Newsletter\Create.cshtml" />
     <Content Include="Views\Newsletter\Thankyou.cshtml" />
     <Content Include="Views\UserEvents\Create.cshtml" />
@@ -249,6 +239,11 @@
     <Content Include="Views\UserEvents\Details.cshtml" />
     <Content Include="Views\UserEvents\Edit.cshtml" />
     <Content Include="Views\UserEvents\Index.cshtml" />
+    <Content Include="Views\RegisterUser\Create.cshtml" />
+    <Content Include="Views\RegisterUser\Delete.cshtml" />
+    <Content Include="Views\RegisterUser\Details.cshtml" />
+    <Content Include="Views\RegisterUser\Edit.cshtml" />
+    <Content Include="Views\RegisterUser\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -256,15 +251,11 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\test\" />
-
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
