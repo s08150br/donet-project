@@ -1,0 +1,60 @@
+﻿@model NotreDameHumber_Website.Models.Worker
+
+<div>
+    <h4>Worker</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.jobTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jobTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shift)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shift)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.desciption)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.desciption)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,152 @@
+﻿body {
+
+}
+header{
+    position: initial; 
+    padding: 20px;
+  
+   
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* make sidebar nav vertical */ 
+@media (max-width: 768px) {
+/*------------------Top navigation------------------*/
+.nav > li{
+    background-color: #66CCCC;
+}
+/*------------------Side Navigation------------------*/
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+  }
+  .sidebar-nav .navbar ul:not {
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+/*------------------footer------------------*/
+footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+footer ul{
+   text-decoration: none; 
+}
+footer li{
+     display: inline-block;
+     list-style: none; 
+     padding: 0 13px;
+
+   
+}
+footer li a{
+    color: black; 
+}
+footer li a:hover{
+    color: aquamarine;
+  text-decoration: none; 
+}
+}
+
+/* need to make form inline or else its' taking whole block */
+#search { display: inline; }
+
+
+.sidebar-nav{
+    padding-top: 20px;
+}
+
+.sideNavigation li{
+    background-color: #F2F2F2;
+    margin: 8px;
+    border-radius: 10px;
+       
+}
+.sideNavigation li a{
+    text-decoration:none;
+    color: black;
+    padding: 10px 14px;
+    display: block;
+}
+.sideNavigation > li > a:hover{
+    color: white;
+
+}
+.sideNavigation li:hover{
+    background-color: skyblue;
+   color: white;    
+}
+ul.sideNavigation{
+    list-style: none; 
+    margin: 0;
+    padding-left: 0;
+}
+
+form{
+    padding: 10px;
+}
+
+.pull-right{
+    display: inline-block !important;
+}
+#alert, #parking{
+    border: 1px solid black;
+    margin-bottom: 3rem;   
+}
+#alert h3, #parking h3{
+  background-color: #518B9C;
+  /*background-color: #FECEAA;*/
+    border-bottom: 1px solid black;
+    margin: 0;
+    
+}
+ #searchBar{
+     position: relative;
+     width: 200px;
+     vertical-align: top;
+ }
+ #navigation{
+     display: inline-block;
+ }
+
+
+   /*---------------*/
+  /*     INDEX     */
+ /*---------------*/
+
+ .icons{
+     display: inline-block;
+     width:32%;
+     vertical-align: top; 
+ }
+ .icons .btn-block{
+      text-align: center;
+    padding: 15px;
+    border-radius: 25px;
+    max-height: 132px;
+    background-color: rgba(102,204,255, 0.4);
+ }
+
