@@ -187,7 +187,6 @@
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\HomeController.cs" />
-<<<<<<< HEAD
     <Compile Include="Controllers\Job.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -199,9 +198,7 @@
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\UserEventsController.cs" />
-=======
-    <Compile Include="Controllers\testController.cs" />
->>>>>>> d66d6257fae4f822bcf7b1f032a73662a48cd13d
+
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -261,13 +258,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-<<<<<<< HEAD
+
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-=======
+
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\test\" />
->>>>>>> d66d6257fae4f822bcf7b1f032a73662a48cd13d
+
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
