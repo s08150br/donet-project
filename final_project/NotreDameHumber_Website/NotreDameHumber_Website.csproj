@@ -197,6 +197,7 @@
     <Compile Include="Controllers\Parking.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\UserEventsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -242,6 +243,11 @@
     <Content Include="Views\Home\AdminEvents\Index.cshtml" />
     <Content Include="Views\Newsletter\Create.cshtml" />
     <Content Include="Views\Newsletter\Thankyou.cshtml" />
+    <Content Include="Views\UserEvents\Create.cshtml" />
+    <Content Include="Views\UserEvents\Delete.cshtml" />
+    <Content Include="Views\UserEvents\Details.cshtml" />
+    <Content Include="Views\UserEvents\Edit.cshtml" />
+    <Content Include="Views\UserEvents\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

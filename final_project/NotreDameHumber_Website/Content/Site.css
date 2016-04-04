@@ -1,6 +1,9 @@
 ﻿body {
 
 }
+.container-fluid{
+    margin: 20px auto; 
+}
 header{
     position: initial; 
     padding: 20px;
@@ -148,5 +151,21 @@ form{
     border-radius: 25px;
     max-height: 132px;
     background-color: rgba(102,204,255, 0.4);
+ }
+
+ /*-------------------Events--------------------*/
+ 
+ .listEvents .btn.btn-link{
+     width: 100%;
+     background-color: rgba(98, 166, 222, 0.4);
+     color: aliceblue;
+     border: 1px solid;
+     border-color: rgba(98, 166, 222, 0.4);
+     border-radius:25px;
+      margin-bottom: 20px;
+ }
+ .listEvents .btn.btn-link:hover{
+     background-color: dodgerblue;
+     opacity(0.4); 
  }
 

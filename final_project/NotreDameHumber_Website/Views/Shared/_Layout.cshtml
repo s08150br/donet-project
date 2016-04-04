@@ -118,7 +118,7 @@
     </nav>
 
     <!--Side Navigation-->
-    <aside class="container">
+    <aside class="container-fluid">
          <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <div class="sidebar-nav">
@@ -130,7 +130,9 @@
                         <li><a href="FindADoctor">Find a Doctor</a></li>
                         <li><a href="VisitingPatients">Visiting Patients</a></li>
                         <li><a href="HealthInformation">Health Information</a></li>
-                        <li><a href="EventCalendar">Event Calendar</a></li>
+             
+                        <li>@Html.ActionLink("Event Calendar", "Index", "UserEvents", new { area = "" }, new { @class = "" })</li>
+                      
                         <li><a href="Subscribe">Subscribe to Newsletters</a></li>
                         <li><a href="Donate">Donate</a></li>
                     </ul>

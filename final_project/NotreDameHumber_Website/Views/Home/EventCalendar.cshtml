@@ -3,14 +3,13 @@
     ViewBag.Title = "EventCalendar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Event Calendar</h2>
-
 <div class="">
     <ul class="navbar navbar-nav">
         @*@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "" })*@   
-        @Html.ActionLink("ViewEvents", "EventCalendar", "AdminEvents", new { area = "" }, new { @class = "" })
+        @Html.ActionLink("ViewEvents", "Index", "AdminEvents", new { area = "" }, new { @class = "" })        
         @Html.ActionLink("CreateEvents", "Create", "AdminEvents", new { area = "" }, new { @class = "" })
+        @*Have not created a User Table yet, so this will not work*@
+        
         @Html.ActionLink("RegisterEvents", "Create", "Events", new { area = "" }, new { @class = "" })
        
         @*@Html.ActionLink("Logout", "Logout", "Account", new { area = "" }, new { @class = "navbar-brand" })
@@ -18,3 +17,4 @@
         
     </ul>
 </div>
+<h2>Event Calendar</h2>

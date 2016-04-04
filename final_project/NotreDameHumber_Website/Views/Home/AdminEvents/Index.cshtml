@@ -2,44 +2,44 @@
 
 @{
     ViewBag.Title = "AdminEvents";
-    @*Layout = "~/Views/Home/EventCalendar.cshtml";
-}*@
-    }
+   Layout = "~/Views/Home/EventCalendar.cshtml";
+}
+    
 <h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="row col-md-1">
     <tr>
-        <th>
+        <th class="col-sm-1">
             @Html.DisplayNameFor(model => model.EventName)
         </th>
-        <th>
+        <th class="col-sm-1">
             @Html.DisplayNameFor(model => model.Description)
         </th>
-        <th>
+        <th class="col-sm-1">
             @Html.DisplayNameFor(model => model.Address)
         </th>
-        <th>
+        <th class="col-sm-1">
             @Html.DisplayNameFor(model => model.Date)
         </th>
-        <th>
+        <th class="col-sm-1">
             @Html.DisplayNameFor(model => model.StartTime)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.EndTime)
         </th>
-        <th>
+        <th class="col-sm-1">
             @Html.DisplayNameFor(model => model.Fee)
         </th>
-        <th>
+        <th class="col-sm-1">
             @Html.DisplayNameFor(model => model.ContactEmail)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Phone)
         </th>
-        <th>
+        <th class="col-sm-1">
             @Html.DisplayNameFor(model => model.EventWebsite)
         </th>
         <th></th>

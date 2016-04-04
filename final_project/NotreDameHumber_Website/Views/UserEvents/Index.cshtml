@@ -5,12 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Event List</h2>
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table row col-md-1 col-sm-1 col-xs-12">
+</p>*@
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.EventName)
@@ -43,10 +43,24 @@
             @Html.DisplayNameFor(model => model.EventWebsite)
         </th>
         <th></th>
-    </tr>
+    </tr>*@
 
-@foreach (var item in Model) {
-    <tr>
+@foreach (var item in Model)
+{
+<div class="listEvents">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-sm-12">
+            <div class="btn btn-link">
+                @*<a href="#">*@
+                <h2>@Html.DisplayFor(modelItem => item.EventName)</h2>
+                <h3 class="pull-right">@Html.DisplayFor(modelItem => item.Date)</h3>
+                <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                @*</a>*@
+            </div>
+        </div>
+    </div>
+</div>
+    @*<tr>
         <td>
             @Html.DisplayFor(modelItem => item.EventName)
         </td>
@@ -76,13 +90,13 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.EventWebsite)
-        </td>
-        <td>
+        </td>*@
+        @*<td>
             @Html.ActionLink("Edit", "Edit", new { id=item.EventId }) |
             @Html.ActionLink("Details", "Details", new { id=item.EventId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.EventId })
-        </td>
-    </tr>
+        </td>*@
+    @*</tr>*@
 }
 
-</table>
+@*</table>*@
