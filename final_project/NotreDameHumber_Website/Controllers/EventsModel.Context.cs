@@ -29,5 +29,11 @@ namespace NotreDameHumber_Website.Controllers
         public DbSet<Donation> Donations { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<EventUser> EventUsers { get; set; }
+        public DbSet<Doctor> Doctors { get; set; }
+        public DbSet<FAQ> FAQs { get; set; }
+        public DbSet<FeedBack> FeedBacks { get; set; }
+        public DbSet<Job> Jobs { get; set; }
+        public DbSet<Parking> Parkings { get; set; }
+        public DbSet<NewsLetter> NewsLetters { get; set; }
     }
 }

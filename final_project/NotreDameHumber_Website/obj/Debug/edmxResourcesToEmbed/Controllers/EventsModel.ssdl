@@ -16,6 +16,15 @@
     <Property Name="Phone" Type="varchar" MaxLength="50" />
     <Property Name="EventWebsite" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="Doctors">
+    <Key>
+      <PropertyRef Name="DoctorId" />
+    </Key>
+    <Property Name="DoctorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Specialization" Type="varchar" MaxLength="50" />
+    <Property Name="Experience" Type="varchar" MaxLength="50" />
+    <Property Name="Info" Type="varchar(max)" />
+  </EntityType>
   <EntityType Name="Donation">
     <Key>
       <PropertyRef Name="DonationId" />
@@ -49,10 +58,70 @@
     <Property Name="Password" Type="varchar" MaxLength="50" />
     <Property Name="Role" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="FAQ">
+    <Key>
+      <PropertyRef Name="QuestionId" />
+    </Key>
+    <Property Name="QuestionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Question" Type="varchar(max)" />
+    <Property Name="Answer" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="FeedBack">
+    <Key>
+      <PropertyRef Name="FeedbackId" />
+    </Key>
+    <Property Name="FeedbackId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Feedback" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="JobId" />
+    </Key>
+    <Property Name="JobId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobTitle" Type="varchar" MaxLength="50" />
+    <Property Name="Location" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Department" Type="varchar" MaxLength="50" />
+    <Property Name="Shift" Type="varchar" MaxLength="50" />
+    <Property Name="FT_PT" Type="varchar" MaxLength="50" />
+    <Property Name="Pay" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Resume" Type="text" />
+  </EntityType>
+  <EntityType Name="NewsLetters">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="varchar" MaxLength="50" />
+    <Property Name="lastName" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Parking">
+    <Key>
+      <PropertyRef Name="ParkingId" />
+    </Key>
+    <Property Name="ParkingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LocationTitle" Type="varchar" MaxLength="50" />
+    <Property Name="PaymentDetails" Type="varchar" MaxLength="50" />
+    <Property Name="Hours" Type="time" Precision="7" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityContainer Name="ModelsStoreContainer">
     <EntitySet Name="AdminEvents" EntityType="Self.AdminEvents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Doctors" EntityType="Self.Doctors" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Donation" EntityType="Self.Donation" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Events" EntityType="Self.Events" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EventUsers" EntityType="Self.EventUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FAQ" EntityType="Self.FAQ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FeedBack" EntityType="Self.FeedBack" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Job" EntityType="Self.Job" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewsLetters" EntityType="Self.NewsLetters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Parking" EntityType="Self.Parking" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
