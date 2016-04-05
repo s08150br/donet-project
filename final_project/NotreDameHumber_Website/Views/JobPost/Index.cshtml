@@ -10,7 +10,7 @@
 <p>
     @Html.ActionLink("Apple now", "Create")
 </p>
-<table class="table">
+<table class="table" style="background-color:beige">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.JobTitle)
@@ -21,19 +21,13 @@
         <th>
             @Html.DisplayNameFor(model => model.Email)
         </th>
+       
         <th>
-            @Html.DisplayNameFor(model => model.Resume)
-        </th>
+            @Html.DisplayNameFor(model => model.Department)
+       
         <th>
-            @Html.DisplayNameFor(model => model.FirstName)
+            @Html.DisplayNameFor(model => model.Shift)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Phone)
-        </th>
-     
         <th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
@@ -54,19 +48,15 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-            
-            <th>
-                @Html.DisplayNameFor(model => model.Resume)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Phone)
-            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shift)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pay)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>

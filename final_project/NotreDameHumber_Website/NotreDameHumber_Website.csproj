@@ -187,6 +187,8 @@
     <Compile Include="Controllers\FeedBack.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\FeedBackAdminController.cs" />
+    <Compile Include="Controllers\FeedbackController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Job.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
@@ -261,6 +263,16 @@
     <Content Include="Views\JobPost\Edit.cshtml" />
     <Content Include="Views\JobPost\Index.cshtml" />
     <Content Include="Views\Shared\_Job.cshtml" />
+    <Content Include="Views\Feedback\Create.cshtml" />
+    <Content Include="Views\Feedback\Delete.cshtml" />
+    <Content Include="Views\Feedback\Details.cshtml" />
+    <Content Include="Views\Feedback\Edit.cshtml" />
+    <Content Include="Views\Feedback\Index.cshtml" />
+    <Content Include="Views\FeedBackAdmin\Create.cshtml" />
+    <Content Include="Views\FeedBackAdmin\Delete.cshtml" />
+    <Content Include="Views\FeedBackAdmin\Details.cshtml" />
+    <Content Include="Views\FeedBackAdmin\Edit.cshtml" />
+    <Content Include="Views\FeedBackAdmin\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
