@@ -35,38 +35,6 @@
             @Html.DisplayFor(model => model.Email)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Department)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Department)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Shift)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Shift)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Pay)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Pay)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
     </dl>
 </div>
 <p>
@@ -74,41 +42,42 @@
     @Html.ActionLink("Back to List", "Index")
 </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Resume)
-        </dt>
+       <dt>
+                @Html.DisplayNameFor(model => model.Resume)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Resume)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Resume)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Phone)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Phone)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.JobId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.JobId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    
