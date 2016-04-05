@@ -191,6 +191,7 @@
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\JobPostController.cs" />
+    <Compile Include="Controllers\JobsController.cs" />
     <Compile Include="Controllers\NewsLetter.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -252,6 +253,11 @@
     <Content Include="Views\JobPost\Edit.cshtml" />
     <Content Include="Views\JobPost\Delete.cshtml" />
     <Content Include="Views\JobPost\Details.cshtml" />
+    <Content Include="Views\Jobs\Create.cshtml" />
+    <Content Include="Views\Jobs\Delete.cshtml" />
+    <Content Include="Views\Jobs\Details.cshtml" />
+    <Content Include="Views\Jobs\Edit.cshtml" />
+    <Content Include="Views\Jobs\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
