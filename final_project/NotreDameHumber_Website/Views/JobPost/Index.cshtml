@@ -15,58 +15,55 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Location)
-        </th>       
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Department)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Shift)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FT_PT)
-        </th>
+
         <th>
             @Html.DisplayNameFor(model => model.Pay)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
-        
+
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.JobTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Location)
-        </td>
-       
-        <td>
-            @Html.DisplayFor(modelItem => item.Department)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Shift)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FT_PT)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Pay)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-       
-        <td>
-            @Html.ActionLink("Apply", "Create")
-            @*@Html.ActionLink("Edit", "Edit", new { id=item.JobId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.JobId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.JobId })*@
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Shift)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+
+            <td>
+                @Html.ActionLink("Create", "Create")
+                @Html.ActionLink("Edit", "Edit", new { id = item.JobId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.JobId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.JobId })
+            </td>
+        </tr>
+    }
 
 </table>

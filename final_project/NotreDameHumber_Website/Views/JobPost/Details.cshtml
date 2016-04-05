@@ -52,14 +52,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.FT_PT)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FT_PT)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Pay)
         </dt>
 
@@ -74,6 +66,13 @@
         <dd>
             @Html.DisplayFor(model => model.Description)
         </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.JobId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
 
         <dt>
             @Html.DisplayNameFor(model => model.Resume)
