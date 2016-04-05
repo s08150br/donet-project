@@ -190,9 +190,9 @@
           <EntitySet Name="Doctors" EntityType="Models.Doctor" />
           <EntitySet Name="FAQs" EntityType="Models.FAQ" />
           <EntitySet Name="FeedBacks" EntityType="Models.FeedBack" />
-          <EntitySet Name="Jobs" EntityType="Models.Job" />
           <EntitySet Name="Parkings" EntityType="Models.Parking" />
           <EntitySet Name="NewsLetters" EntityType="Models.NewsLetter" />
+          <EntitySet Name="Jobs" EntityType="Models.Job" />
         </EntityContainer>
         <EntityType Name="Doctor">
           <Key>
@@ -222,21 +222,6 @@
           <Property Name="Age" Type="Int32" />
           <Property Name="Feedback1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="Job">
-          <Key>
-            <PropertyRef Name="JobId" />
-          </Key>
-          <Property Name="JobId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="JobTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Shift" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="FT_PT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Pay" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Resume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-        </EntityType>
         <EntityType Name="Parking">
           <Key>
             <PropertyRef Name="ParkingId" />
@@ -256,6 +241,21 @@
           <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="lastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="JobId" />
+          </Key>
+          <Property Name="JobId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JobTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Shift" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FT_PT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pay" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Resume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -347,22 +347,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Jobs">
-            <EntityTypeMapping TypeName="Models.Job">
-              <MappingFragment StoreEntitySet="Job">
-                <ScalarProperty Name="Resume" ColumnName="Resume" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Pay" ColumnName="Pay" />
-                <ScalarProperty Name="FT_PT" ColumnName="FT_PT" />
-                <ScalarProperty Name="Shift" ColumnName="Shift" />
-                <ScalarProperty Name="Department" ColumnName="Department" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Location" ColumnName="Location" />
-                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
-                <ScalarProperty Name="JobId" ColumnName="JobId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Parkings">
             <EntityTypeMapping TypeName="Models.Parking">
               <MappingFragment StoreEntitySet="Parking">
@@ -382,6 +366,22 @@
                 <ScalarProperty Name="lastName" ColumnName="lastName" />
                 <ScalarProperty Name="firstName" ColumnName="firstName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jobs">
+            <EntityTypeMapping TypeName="Models.Job">
+              <MappingFragment StoreEntitySet="Job">
+                <ScalarProperty Name="Resume" ColumnName="Resume" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Pay" ColumnName="Pay" />
+                <ScalarProperty Name="FT_PT" ColumnName="FT_PT" />
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
