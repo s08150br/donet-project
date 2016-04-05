@@ -10,11 +10,35 @@
          <a href="#" class="btn-block"><i class="fa fa-calendar fa-5x"></i>
             <p>Book an Appointment</p></a>
     </div>
-    <div class="icons">
-        <a href="#" class="btn-block"><i class="fa fa-clock-o fa-5x"></i>
-            @*<i class="fa fa-calendar-plus-o"></i>*@
-        <p>Hours of Operation</p></a>
+
+    <div class="icons" id="hoursOfOperation">
+        <div>
+            <a href="#" class="btn-block" id="hoursOfOperation">
+                <i class="fa fa-clock-o fa-5x"></i>
+                @*<i class="fa fa-calendar-plus-o"></i>*@
+                <p>Hours of Operation</p>
+            </a>
+        </div>
+        <div id="toggle-time">
+            <ul>
+                <li>Mon: 8am - 9pm</li>
+                <li>Tues: 8am - 9pm</li>
+                <li>Wed: 8am - 9pm</li>
+                <li>Thurs: 8am - 9pm</li>
+                <li>Fri: 8am - 9pm</li>
+                <li>Sat: 8am - 9pm</li>
+                <li>Sun: 8am - 9pm</li>
+            </ul>
+        </div>
+        <script>
+        $(document).ready(function () {
+            $("#hoursOfOperation").click(function () {
+                $("#toggle-time ul").toggle(700);
+            });
+        });
+        </script>
     </div>
+    
     <div class="icons">
         <a href="#" class="btn-block"><i class="fa fa-phone fa-5x"></i>
         <p>Contact Us</p></a>
@@ -31,28 +55,31 @@
         <p>Parking content</p>
     </div>
 
-    <div>
-    
-
-        <div id="e-News">
-            <h3>Newsletter</h3>
-            <form>
-               <input type="email" value="text"  />
-             <input type="submit" value="Create" class="btn btn-default" />
-                @Html.ActionLink("Submit", "Newsletters", "Create")
-            </form>
-        </div>
-        
-    </div>
+    @*<div>
+    <div id="e-News">
+         <h3>Newsletter</h3>
+         <form>
+            <input type="email" value="text"  />
+          <input type="submit" value="Create" class="btn btn-default" />
+             @Html.ActionLink("Submit", "Newsletters", "Create")
+         </form>
+     </div>
+    </div>*@
 </div>
 
 
 
 <div  class="col-md-8 col-sm-8 col-xs-12">
     <h2>Index</h2>
-    <p>ffffdddddddddggggggggggggfjgbdfkgbdkjfgbkdjfgbfdjgbdfkjbgfbg ffffdddddddddggggggggggggfjgbdfkgbdkjfgbkdjfgbfdjgbdfkjbgfbg
-    ffffdddddddddggggggggggggfjgbdfkgbdkjfgbkdjfgbfdjgbdfkjbgfbg
-    ffffdddddddddggggggggggggfjgbdfkgbdkjfgbkdjfgbfdjgbdfkjbgfbg</p>
+    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. 
+    It has roots in a piece of classical Latin literature from 45 BC, making 
+    it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney 
+    College in Virginia, looked up one of the more obscure Latin words, consectetur, from 
+    a Lorem Ipsum passage, and going through the cites of the word in classical literature, 
+    discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 
+    "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 
+    BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. 
+    The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
 </div>
 
 

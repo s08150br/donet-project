@@ -2,7 +2,7 @@
 
 }
 .container-fluid{
-    margin: 20px auto; 
+
 }
 header{
     position: initial; 
@@ -151,6 +151,9 @@ form{
     border-radius: 25px;
     max-height: 132px;
     background-color: rgba(102,204,255, 0.4);
+ }
+ #toggle-time ul{
+     display: none;
  }
 
  /*-------------------Events--------------------*/
