@@ -91,6 +91,9 @@
     <Property Name="Pay" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Description" Type="varchar(max)" />
     <Property Name="Resume" Type="text" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="11" />
   </EntityType>
   <EntityType Name="NewsLetters">
     <Key>
@@ -112,6 +115,18 @@
     <Property Name="Email" Type="varchar" MaxLength="50" />
     <Property Name="Phone" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="Worker">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Location" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="11" />
+    <Property Name="Resume" Type="text" />
+  </EntityType>
   <EntityContainer Name="ModelsStoreContainer">
     <EntitySet Name="AdminEvents" EntityType="Self.AdminEvents" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Doctors" EntityType="Self.Doctors" Schema="dbo" store:Type="Tables" />
@@ -123,5 +138,6 @@
     <EntitySet Name="Job" EntityType="Self.Job" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NewsLetters" EntityType="Self.NewsLetters" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Parking" EntityType="Self.Parking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Worker" EntityType="Self.Worker" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

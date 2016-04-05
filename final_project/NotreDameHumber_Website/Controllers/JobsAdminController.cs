@@ -9,17 +9,17 @@ using System.Web.Mvc;
 
 namespace NotreDameHumber_Website.Controllers
 {
-    public class JobsController : Controller
+    public class JobsAdminController : Controller
     {
         private HDHDBContext db = new HDHDBContext();
 
-        // GET: Jobs
+        // GET: JobsAdmin
         public ActionResult Index()
         {
             return View(db.Jobs.ToList());
         }
 
-        // GET: Jobs/Details/5
+        // GET: JobsAdmin/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -33,35 +33,22 @@ namespace NotreDameHumber_Website.Controllers
             }
             return View(job);
         }
-        //
 
-        // GET: Jobs/Create
+        // GET: JobsAdmin/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Jobs/Create
+        // POST: JobsAdmin/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "JobId,JobTitle,Location,Email,Department,Shift,FT_PT,Pay,Description,Resume")] Job job)
+        public ActionResult Create([Bind(Include = "JobId,JobTitle,Location,Email,Department,Shift,FT_PT,Pay,Description,Resume,FirstName,LastName,Phone")] Job job)
         {
             if (ModelState.IsValid)
             {
-                //db.JobTitle = job["jobTitle"];
-                //db.location = formCollection["location"];
-                //worker.email = formCollection["email"];
-                //worker.shift = Convert.ToInt32(formCollection["shift"]);
-                //worker.pay = Convert.ToInt32(formCollection["pay"]);
-                //worker.desciption = formCollection["desciption"];
-
-                //workerContext.Workers.Add(worker);
-                //workerContext.SaveChanges();
-                //return RedirectToAction("Index");
-
-
                 db.Jobs.Add(job);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -70,7 +57,7 @@ namespace NotreDameHumber_Website.Controllers
             return View(job);
         }
 
-        // GET: Jobs/Edit/5
+        // GET: JobsAdmin/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -85,12 +72,12 @@ namespace NotreDameHumber_Website.Controllers
             return View(job);
         }
 
-        // POST: Jobs/Edit/5
+        // POST: JobsAdmin/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "JobId,JobTitle,Location,Email,Department,Shift,FT_PT,Pay,Description,Resume")] Job job)
+        public ActionResult Edit([Bind(Include = "JobId,JobTitle,Location,Email,Department,Shift,FT_PT,Pay,Description,Resume,FirstName,LastName,Phone")] Job job)
         {
             if (ModelState.IsValid)
             {
@@ -101,7 +88,7 @@ namespace NotreDameHumber_Website.Controllers
             return View(job);
         }
 
-        // GET: Jobs/Delete/5
+        // GET: JobsAdmin/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -116,7 +103,7 @@ namespace NotreDameHumber_Website.Controllers
             return View(job);
         }
 
-        // POST: Jobs/Delete/5
+        // POST: JobsAdmin/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

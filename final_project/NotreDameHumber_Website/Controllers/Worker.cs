@@ -12,20 +12,14 @@ namespace NotreDameHumber_Website.Controllers
     using System;
     using System.Collections.Generic;
     
-    public partial class Job
+    public partial class Worker
     {
-        public int JobId { get; set; }
-        public string JobTitle { get; set; }
-        public string Location { get; set; }
-        public string Email { get; set; }
-        public string Department { get; set; }
-        public string Shift { get; set; }
-        public string FT_PT { get; set; }
-        public Nullable<decimal> Pay { get; set; }
-        public string Description { get; set; }
-        public string Resume { get; set; }
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Location { get; set; }
+        public string Email { get; set; }
         public string Phone { get; set; }
+        public string Resume { get; set; }
     }
 }

@@ -60,6 +60,7 @@
     <EntitySet Name="Parkings" EntityType="Models.Parking" />
     <EntitySet Name="NewsLetters" EntityType="Models.NewsLetter" />
     <EntitySet Name="Jobs" EntityType="Models.Job" />
+    <EntitySet Name="Workers" EntityType="Models.Worker" />
   </EntityContainer>
   <EntityType Name="Doctor">
     <Key>
@@ -122,6 +123,21 @@
     <Property Name="FT_PT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Pay" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Resume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Worker">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
     <Property Name="Resume" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

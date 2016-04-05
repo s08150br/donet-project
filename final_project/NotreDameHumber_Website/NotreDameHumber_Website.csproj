@@ -191,7 +191,7 @@
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\JobPostController.cs" />
-    <Compile Include="Controllers\JobsController.cs" />
+    <Compile Include="Controllers\JobsAdminController.cs" />
     <Compile Include="Controllers\NewsLetter.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -201,6 +201,9 @@
     </Compile>
     <Compile Include="Controllers\RegisterUserController.cs" />
     <Compile Include="Controllers\UserEventsController.cs" />
+    <Compile Include="Controllers\Worker.cs">
+      <DependentUpon>EventsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -248,16 +251,16 @@
     <Content Include="Views\RegisterUser\Details.cshtml" />
     <Content Include="Views\RegisterUser\Edit.cshtml" />
     <Content Include="Views\RegisterUser\Index.cshtml" />
-    <Content Include="Views\JobPost\Index.cshtml" />
+    <Content Include="Views\JobsAdmin\Create.cshtml" />
+    <Content Include="Views\JobsAdmin\Delete.cshtml" />
+    <Content Include="Views\JobsAdmin\Details.cshtml" />
+    <Content Include="Views\JobsAdmin\Edit.cshtml" />
+    <Content Include="Views\JobsAdmin\Index.cshtml" />
     <Content Include="Views\JobPost\Create.cshtml" />
-    <Content Include="Views\JobPost\Edit.cshtml" />
     <Content Include="Views\JobPost\Delete.cshtml" />
     <Content Include="Views\JobPost\Details.cshtml" />
-    <Content Include="Views\Jobs\Create.cshtml" />
-    <Content Include="Views\Jobs\Delete.cshtml" />
-    <Content Include="Views\Jobs\Details.cshtml" />
-    <Content Include="Views\Jobs\Edit.cshtml" />
-    <Content Include="Views\Jobs\Index.cshtml" />
+    <Content Include="Views\JobPost\Edit.cshtml" />
+    <Content Include="Views\JobPost\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -266,6 +269,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\uploads\" />
     <Folder Include="Views\test\" />
   </ItemGroup>
   <ItemGroup>

@@ -2,96 +2,139 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using NotreDameHumber_Website.Models;
 
 namespace NotreDameHumber_Website.Controllers
 {
     public class JobPostController : Controller
     {
-        // GET: Joppost
+        private HDHDBContext db = new HDHDBContext();
+
+        // GET: JobPost
         public ActionResult Index()
         {
-            JopContext workerContext = new JopContext();
-            List<Worker> workers = workerContext.Workers.ToList();
-            return View(workers);
+            return View(db.Jobs.ToList());
         }
-
+        //Upload
         [HttpPost]
-        public ActionResult Create(FormCollection formCollection)
+        public ActionResult Index(HttpPostedFileBase file)
         {
-            Worker worker = new Worker();
-            JopContext workerContext = new JopContext();
 
-            worker.jobTitle = formCollection["jobTitle"];
-            worker.location = formCollection["location"];
-            worker.email = formCollection["email"];
-            worker.shift = Convert.ToInt32(formCollection["shift"]);
-            worker.pay = Convert.ToInt32(formCollection["pay"]);
-            worker.desciption = formCollection["desciption"];
+            if (file.ContentLength > 0)
+            {
+                var fileName = Path.GetFileName(file.FileName);
+                var path = Path.Combine(Server.MapPath("~/App_Data/Tables/Job/Resume"), fileName);
+                file.SaveAs(path);
+            }
 
-            workerContext.Workers.Add(worker);
-            workerContext.SaveChanges();
             return RedirectToAction("Index");
         }
+        // GET: JobPost/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Job job = db.Jobs.Find(id);
+            if (job == null)
+            {
+                return HttpNotFound();
+            }
+            return View(job);
+        }
 
-        [HttpGet]
+        // GET: JobPost/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        [HttpGet]
-        public ActionResult Edit(int id)
-        {
-            //make new object of WorkerContext
-            JopContext workerContext = new JopContext();
-            Worker worker = workerContext.Workers.Single(x => x.Id == id);
-
-            return View(worker);
-        }
-
+        // POST: JobPost/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        public ActionResult Edit(Worker worker)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "JobId,JobTitle,Location,Email,Department,Shift,FT_PT,Pay,Description,Resume,FirstName,LastName,Phone")] Job job)
         {
-            JopContext workerContext = new JopContext();
-            workerContext.Entry(worker).State = System.Data.Entity.EntityState.Modified;
-            workerContext.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                db.Jobs.Add(job);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
 
-            return RedirectToAction("Index");
+            return View(job);
         }
 
-        [HttpGet]
-        public ActionResult Delete(int id)
+        // GET: JobPost/Edit/5
+        public ActionResult Edit(int? id)
         {
-            JopContext workerContext = new JopContext();
-            Worker worker = workerContext.Workers.Single(x => x.Id == id);
-
-            return View(worker);
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Job job = db.Jobs.Find(id);
+            if (job == null)
+            {
+                return HttpNotFound();
+            }
+            return View(job);
         }
 
+        // POST: JobPost/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "JobId,JobTitle,Location,Email,Department,Shift,FT_PT,Pay,Description,Resume,FirstName,LastName,Phone")] Job job)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(job).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(job);
+        }
+
+        // GET: JobPost/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Job job = db.Jobs.Find(id);
+            if (job == null)
+            {
+                return HttpNotFound();
+            }
+            return View(job);
+        }
+
+        // POST: JobPost/Delete/5
         [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            JopContext workerContext = new JopContext();
-            Worker worker = workerContext.Workers.Single(x => x.Id == id);
-
-            workerContext.Workers.Remove(worker);
-            workerContext.SaveChanges();
-
+            Job job = db.Jobs.Find(id);
+            db.Jobs.Remove(job);
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
 
-        [HttpGet]
-        public ActionResult Details(int id)
+        protected override void Dispose(bool disposing)
         {
-            JopContext workerContext = new JopContext();
-            Worker worker = workerContext.Workers.Single(x => x.Id == id);
-
-            return View(worker);
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }
