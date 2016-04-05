@@ -12,14 +12,18 @@ namespace NotreDameHumber_Website.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Worker
+    public partial class AdminEvents
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Location { get; set; }
-        public string Email { get; set; }
+        public int EventId { get; set; }
+        public string EventName { get; set; }
+        public string Description { get; set; }
+        public string Address { get; set; }
+        public string Date { get; set; }
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
+        public string Fee { get; set; }
+        public string ContactEmail { get; set; }
         public string Phone { get; set; }
-        public string Resume { get; set; }
+        public string EventWebsite { get; set; }
     }
 }

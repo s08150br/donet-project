@@ -1,0 +1,55 @@
+﻿<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<h2>Student</h2>
+@*@Current Time: @DateTime.Now.ToLongTimeString()
+    <br>*@
+<script type="text/javascript" language="javascript">
+    function ClearResults()
+    {
+        $("#divLoadings").empty()
+    }
+    function CountRows()
+    {
+        alert(($("#StudentsTable tr").length-1) +' rows retrieved');
+    }
+
+</script>
+@Ajax.ActionLink("All", "All", new AjaxOptions
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divStudents",
+    InsertionMode = InsertionMode.Replace,
+    LoadingElementId = "divLoading",
+    OnBegin = "ClearResults",
+    OnSuccess = "CountRows"
+})
+<span style="color:blue"></span>
+
+@Ajax.ActionLink("Top 3", "TopThree", new AjaxOptions
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divStudents",
+    InsertionMode = InsertionMode.Replace,
+    LoadingElementId = "divLoading",
+    OnBegin = "ClearResults",
+    OnSuccess = "CountRows"
+})
+<span style="color:blue"></span>
+@Ajax.ActionLink("Botton 3", "BottomThree", new AjaxOptions
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divStudents",
+    InsertionMode = InsertionMode.Replace,
+    LoadingElementId = "divLoading",
+    OnBegin = "ClearResults",
+    OnSuccess = "CountRows"
+})
+
+<div id="divLoading" style="display:none">
+    <img src="~/Images/spinner.gif" />
+</div>
+
+
+<div id="divStudents">
+
+</div>

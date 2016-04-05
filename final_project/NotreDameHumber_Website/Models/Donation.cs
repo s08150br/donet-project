@@ -12,14 +12,15 @@ namespace NotreDameHumber_Website.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Worker
+    public partial class Donation
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Location { get; set; }
+        public int DonationId { get; set; }
+        public string Name { get; set; }
+        public decimal Amount { get; set; }
+        public string Regularity { get; set; }
+        public int CardNumber { get; set; }
+        public int CVS { get; set; }
+        public string ExpiryDate { get; set; }
         public string Email { get; set; }
-        public string Phone { get; set; }
-        public string Resume { get; set; }
     }
 }

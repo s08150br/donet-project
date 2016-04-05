@@ -12,14 +12,13 @@ namespace NotreDameHumber_Website.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Worker
+    public partial class Parking
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Location { get; set; }
+        public int ParkingId { get; set; }
+        public string LocationTitle { get; set; }
+        public string PaymentDetails { get; set; }
+        public Nullable<System.TimeSpan> Hours { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public string Resume { get; set; }
     }
 }

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Ajexexaml.Models.Student>
+
+
+<table class="table" id="StudentsTable" style="border:1px solid black; background-color:silver; width:200px">
+    <tr>
+        <th>
+            @Html.DisplayPayFor(model => model.Pay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalMarks)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalMarks)
+            </td>
+
+        </tr>
+    }
+
+</table>

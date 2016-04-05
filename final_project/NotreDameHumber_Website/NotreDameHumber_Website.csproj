@@ -125,7 +125,18 @@
     <Content Include="Images\download %281%29.jpg" />
     <Content Include="Images\download %282%29.jpg" />
     <Content Include="Images\download.jpg" />
+    <Content Include="Images\spinner.gif" />
     <Content Include="Images\Winter-Tiger-Wild-Cat-Images.jpg" />
+    <Content Include="Models\JobdateModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>JobdateModel.edmx</DependentUpon>
+      <LastGenOutput>JobdateModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\JobdateModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>JobdateModel.edmx</DependentUpon>
+      <LastGenOutput>JobdateModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Controllers\EventsModel.edmx">
@@ -134,6 +145,13 @@
     </EntityDeploy>
     <Content Include="Controllers\EventsModel.edmx.diagram">
       <DependentUpon>EventsModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\JobdateModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>JobdateModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\JobdateModel.edmx.diagram">
+      <DependentUpon>JobdateModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -200,6 +218,7 @@
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\RegisterUserController.cs" />
+    <Compile Include="Controllers\ShowJobController.cs" />
     <Compile Include="Controllers\UserEventsController.cs" />
     <Compile Include="Controllers\Worker.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
@@ -207,11 +226,58 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AdminEvents.cs">
+      <DependentUpon>JobdateModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DBContext.cs" />
+    <Compile Include="Models\Doctors.cs">
+      <DependentUpon>JobdateModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Donation.cs">
+      <DependentUpon>JobdateModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Events.cs">
+      <DependentUpon>JobdateModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EventUsers.cs">
+      <DependentUpon>JobdateModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FAQ.cs">
+      <DependentUpon>JobdateModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FeedBack.cs">
+      <DependentUpon>JobdateModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Job.cs">
+      <DependentUpon>JobdateModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\JobdateModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JobdateModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\JobdateModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JobdateModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\JobdateModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JobdateModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\JopContext.cs" />
     <Compile Include="Models\Newsletter.cs" />
     <Compile Include="Models\NewsLetterContext.cs" />
-    <Compile Include="Models\Worker.cs" />
+    <Compile Include="Models\NewsLetters.cs">
+      <DependentUpon>JobdateModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Parking.cs">
+      <DependentUpon>JobdateModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Worker.cs">
+      <DependentUpon>JobdateModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -261,6 +327,8 @@
     <Content Include="Views\JobPost\Details.cshtml" />
     <Content Include="Views\JobPost\Edit.cshtml" />
     <Content Include="Views\JobPost\Index.cshtml" />
+    <Content Include="Views\Shared\_Job.cshtml" />
+    <Content Include="Views\ShowJob\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
