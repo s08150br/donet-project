@@ -36,16 +36,25 @@
             </div>
 
             <div class="form-group">
-                <label for="amount">Giá sản phẩm</label>
+                <label for="amount">price</label>
                 @Html.TextBoxFor(x => x.amount, new { @class = "form-control", placeholder = "Giá sản phẩm" })
                 @Html.ValidationMessageFor(x => x.amount)
             </div>
 
             <div class="form-group">
-                <label for="quantity">Số lương sản phẩm</label>
+                <label for="quantity">number</label>
                 @Html.TextBoxFor(x => x.quantity, new { @class = "form-control", placeholder = "Số lương sản phẩm" })
                 @Html.ValidationMessageFor(x => x.quantity)
             </div>
+            <div class="form-group">
+                <label for="hours">Select Hours:</label>
+                @Html.DropDownListFor(x => x.hours, new List<SelectListItem>
+           {
+               new SelectListItem() {Text= "1", Value="1"},
+               new SelectListItem() {Text= "2", Value="2"}
+           })
+            </div>
+
             <button type="submit" class="btn btn-success">Thêm vào giò hàng</button>
         }
     </div>

@@ -27,5 +27,6 @@ namespace NotreDameHumber_Website.Models
         [RegularExpression("\\d+", ErrorMessage = "Phải là số")]
         [Range(1, 100, ErrorMessage = "Số lượng phải từ 1-100")]
         public int quantity { get; set; }
+        public int hours { get; set; }
     }
 }
