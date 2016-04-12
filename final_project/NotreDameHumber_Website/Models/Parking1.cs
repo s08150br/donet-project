@@ -1,26 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace NotreDameHumber_Website.Models
 {
     public class Parking1
     {
-        [Required(ErrorMessage = "PleaseXXXX")]
-        [RegularExpression("\\d+", ErrorMessage = "Please2XXXX")]
-        [Range(1000, 2000, ErrorMessage = "ID oo 1000-2000")]
+        [Required(ErrorMessage = "Không được bỏ trống")]
+        [RegularExpression("\\d+", ErrorMessage = "Phải là số")]
+        [Range(1000, 2000, ErrorMessage = "ID phải từ 1000-2000")]
         public int item_number { get; set; }
-        [Required(ErrorMessage = "PleaseXXXX")]
-        [StringLength(100, MinimumLength = 5, ErrorMessage = "Plaease BBB 100")]
+
+        [Required(ErrorMessage = "Không được bỏ trống")]
+        [StringLength(100, MinimumLength = 5, ErrorMessage = "Tên sản phẩm từ 5 đến 100 ký tụ")]
         public string item_name { get; set; }
-        [Required(ErrorMessage = "PleaseXXXX")]
-        [Range(1.0, 100.0, ErrorMessage = "ID vv 1-100 USD")]
+
+        [Required(ErrorMessage = "Không được bỏ trống")]
+        [Range(1.0, 100.0, ErrorMessage = "Giá từ 1-100 USD")]
         public double amount { get; set; }
-        [Required(ErrorMessage = "PleaseXXXX")]
-        [RegularExpression("\\d+", ErrorMessage = "Please2XXXX")]
-        [Range(1, 100, ErrorMessage = "ID XX 1-100")]
+
+        [Required(ErrorMessage = "Không được bỏ trống")]
+        [RegularExpression("\\d+", ErrorMessage = "Phải là số")]
+        [Range(1, 100, ErrorMessage = "Số lượng phải từ 1-100")]
         public int quantity { get; set; }
     }
 }

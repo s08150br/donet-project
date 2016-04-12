@@ -3,36 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using NotreDameHumber_Website.Models;
 
 namespace NotreDameHumber_Website.Controllers
 {
     public class Parking1Controller : Controller
     {
-       [HttpGet]
+
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Index(Parking p)
-
+        public ActionResult Index(Parking1 p)
         {
             if (ModelState.IsValid)
             {
-                if (Session["Cart"] != null)
+                if (Session["cart"] != null)
                 {
-                    var Is = Session["Cart"] as List<Parking>;
-                    Is.Add(p);
+                    var ls = Session["cart"] as List<Parking1>;
+                    ls.Add(p);
                 }
                 else
                 {
-                    Session["Cart"] = new List<Parking>() { p };
+                    Session["cart"] = new List<Parking1>() { p };
                 }
-                ModelState.Clear();
-                RedirectToAction("Index", "Parking");
+                ModelState.Clear();// clear data from Form
+                RedirectToAction("Index", "Parking1"); // Anti F5 submit
             }
-            return View();
+            return View(); // model validate is false
         }
-
     }
 }
