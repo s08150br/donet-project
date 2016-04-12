@@ -202,6 +202,8 @@
     <Compile Include="Controllers\Parking.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Parking1Controller.cs" />
+    <Compile Include="Controllers\Paypal1Controller.cs" />
     <Compile Include="Controllers\RegisterUserController.cs" />
     <Compile Include="Controllers\UserEventsController.cs" />
     <Compile Include="Controllers\Worker.cs">
@@ -211,8 +213,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DBContext.cs" />
+    <Compile Include="Models\GetDataPaypal1.cs" />
     <Compile Include="Models\Newsletter.cs" />
     <Compile Include="Models\NewsLetterContext.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Parking1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -273,6 +278,9 @@
     <Content Include="Views\FeedBackAdmin\Details.cshtml" />
     <Content Include="Views\FeedBackAdmin\Edit.cshtml" />
     <Content Include="Views\FeedBackAdmin\Index.cshtml" />
+    <Content Include="Views\Parking1\Index.cshtml" />
+    <Content Include="Views\Paypal1\Index.cshtml" />
+    <Content Include="Views\Paypal1\GetDataPaypal.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
