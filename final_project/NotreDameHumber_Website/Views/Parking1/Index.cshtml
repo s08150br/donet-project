@@ -25,13 +25,13 @@
 
             <div class="form-group">
                 <label for="item_name">Your mame</label>
-                @Html.TextBoxFor(x => x.item_name, new { @class = "form-control", placeholder = "item_name" })
+                @Html.TextBoxFor(x => x.item_name, new { @class = "form-control", placeholder = "Your mame" })
                 @Html.ValidationMessageFor(x => x.item_name)
             </div>
 
             <div class="form-group">
                 <label for="item_number">Cars number</label>
-                @Html.TextBoxFor(x => x.item_number, new { @class = "form-control", placeholder = "item_number" })
+                @Html.TextBoxFor(x => x.item_number, new { @class = "form-control", placeholder = "Cars number" })
                 @Html.ValidationMessageFor(x => x.item_number)
             </div>
 
@@ -46,7 +46,7 @@
 
             <div class="form-group">
                 <label for="quantity">How many hours you want to stay?</label>
-                @Html.TextBoxFor(x => x.quantity, new { @class = "form-control", placeholder = "number" })
+                @Html.TextBoxFor(x => x.quantity, new { @class = "form-control", placeholder = "hours" })
                 @Html.ValidationMessageFor(x => x.quantity)
             </div>
             <div class="form-group">
@@ -58,11 +58,13 @@
            })
             </div>
 
-            <button type="submit" class="btn btn-success">Pay here</button>
+            <button type="submit" class="btn btn-success">(1*) Submit</button>
+            @Html.ActionLink("(2*)Pay Right Now", "Index", new { controller = "Paypal1" }, new { @class = "btn btn-primary" })
         }
+        <div class="col-md-12">
+            
+        </div>
     </div>
-    <div class="col-md-12">
-        @Html.ActionLink("Pay here", "Index", new { controller = "Paypal1" }, new { @class = "btn btn-primary" })
-    </div>
+   
 </body>
 </html>

@@ -1,0 +1,23 @@
+﻿@using System.Configuration
+@model List<NotreDameHumber_Website.Models.Parking1>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <img style="align-content:center; width:auto;padding-top: 31px;" src="~/Images/Capture.jpg" />
+    
+        <div>
+            <a style="background-color:darkgreen;font-size:large;color:beige;  padding-left: 204px;padding-right: 211px;"  @Html.ActionLink("I want park here", "Index", "Parking1", new { area = "" }, new { @class = "btn btn-default"})</a>
+
+        </div>
+    
+</body>
+</html>

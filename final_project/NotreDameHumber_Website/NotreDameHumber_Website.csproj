@@ -122,6 +122,7 @@
     </Content>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Capture.jpg" />
     <Content Include="Images\download %281%29.jpg" />
     <Content Include="Images\download %282%29.jpg" />
     <Content Include="Images\download.jpg" />
@@ -145,7 +146,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -282,6 +285,7 @@
     <Content Include="Views\Parking1\Index.cshtml" />
     <Content Include="Views\Paypal1\Index.cshtml" />
     <Content Include="Views\Paypal1\GetDataPaypal.cshtml" />
+    <Content Include="Views\ParkingMap\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -291,7 +295,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\uploads\" />
-    <Folder Include="Views\ParkingMap\" />
     <Folder Include="Views\test\" />
   </ItemGroup>
   <ItemGroup>
