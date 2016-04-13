@@ -1,6 +1,6 @@
 ﻿@model NotreDameHumber_Website.Models.Parking1
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
 }
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Thêm sản phẩm</title>
+    <title>Parking payment</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
     <script src="~/Scripts/jquery-2.1.4.min.js"></script>
@@ -24,42 +24,45 @@
             @Html.ValidationSummary(true)
 
             <div class="form-group">
-                <label for="item_name">Tên sản phẩm</label>
-                @Html.TextBoxFor(x => x.item_name, new { @class = "form-control", placeholder = "Tên sản phẩm" })
+                <label for="item_name">Your mame</label>
+                @Html.TextBoxFor(x => x.item_name, new { @class = "form-control", placeholder = "item_name" })
                 @Html.ValidationMessageFor(x => x.item_name)
             </div>
 
             <div class="form-group">
-                <label for="item_number">Mã sản phẩm</label>
-                @Html.TextBoxFor(x => x.item_number, new { @class = "form-control", placeholder = "Mã sản phẩm" })
+                <label for="item_number">Cars number</label>
+                @Html.TextBoxFor(x => x.item_number, new { @class = "form-control", placeholder = "item_number" })
                 @Html.ValidationMessageFor(x => x.item_number)
             </div>
 
             <div class="form-group">
-                <label for="amount">price</label>
-                @Html.TextBoxFor(x => x.amount, new { @class = "form-control", placeholder = "Giá sản phẩm" })
-                @Html.ValidationMessageFor(x => x.amount)
+                <label for="amount">price:$4/Hours</label>
+                @Html.HiddenFor(x => x.amount, new { @Value = 4, @class = "form-control", placeholder = "price" })
+                @Html.ValidationMessageFor(x => x.amount )
+                <script>
+                   
+                </script>
             </div>
 
             <div class="form-group">
-                <label for="quantity">number</label>
-                @Html.TextBoxFor(x => x.quantity, new { @class = "form-control", placeholder = "Số lương sản phẩm" })
+                <label for="quantity">How many hours you want to stay?</label>
+                @Html.TextBoxFor(x => x.quantity, new { @class = "form-control", placeholder = "number" })
                 @Html.ValidationMessageFor(x => x.quantity)
             </div>
             <div class="form-group">
-                <label for="hours">Select Hours:</label>
+                <label for="hours">Select area:</label>
                 @Html.DropDownListFor(x => x.hours, new List<SelectListItem>
            {
-               new SelectListItem() {Text= "1", Value="1"},
-               new SelectListItem() {Text= "2", Value="2"}
+               new SelectListItem() {Text= "A", Value="1"},
+               new SelectListItem() {Text= "B", Value="2"}
            })
             </div>
 
-            <button type="submit" class="btn btn-success">Thêm vào giò hàng</button>
+            <button type="submit" class="btn btn-success">Pay here</button>
         }
     </div>
     <div class="col-md-12">
-        @Html.ActionLink("Thanh toán", "Index", new { controller = "Paypal1" }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Pay here", "Index", new { controller = "Paypal1" }, new { @class = "btn btn-primary" })
     </div>
 </body>
 </html>

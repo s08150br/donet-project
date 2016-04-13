@@ -203,6 +203,7 @@
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Parking1Controller.cs" />
+    <Compile Include="Controllers\ParkingMapController.cs" />
     <Compile Include="Controllers\Paypal1Controller.cs" />
     <Compile Include="Controllers\RegisterUserController.cs" />
     <Compile Include="Controllers\UserEventsController.cs" />
@@ -290,6 +291,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\uploads\" />
+    <Folder Include="Views\ParkingMap\" />
     <Folder Include="Views\test\" />
   </ItemGroup>
   <ItemGroup>
