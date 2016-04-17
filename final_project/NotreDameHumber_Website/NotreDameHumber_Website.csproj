@@ -123,11 +123,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\Capture.jpg" />
-    <Content Include="Images\download %281%29.jpg" />
-    <Content Include="Images\download %282%29.jpg" />
-    <Content Include="Images\download.jpg" />
+    <Content Include="Images\logo-01.png" />
     <Content Include="Images\spinner.gif" />
-    <Content Include="Images\Winter-Tiger-Wild-Cat-Images.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Controllers\EventsModel.edmx">
