@@ -2,7 +2,7 @@
 
 }
 .container-fluid{
-
+    margin: 0 5%;
 }
 header{
     position: initial; 
@@ -26,9 +26,9 @@ textarea {
 /* make sidebar nav vertical */ 
 @media (max-width: 768px) {
 /*------------------Top navigation------------------*/
-.nav > li{
+/*.nav > li{
     background-color: #66CCCC;
-}
+}*/
 /*------------------Side Navigation------------------*/
   .sidebar-nav .navbar .navbar-collapse {
     padding: 0;
@@ -66,7 +66,7 @@ footer li{
    
 }
 footer li a{
-    color: black; 
+    color: white; 
 }
 footer li a:hover{
     color: aquamarine;
@@ -75,7 +75,11 @@ footer li a:hover{
 }
 
 /* need to make form inline or else its' taking whole block */
-#search { display: inline; }
+/*#search { 
+    display: inline; 
+
+
+}*/
 
 
 .sidebar-nav{
@@ -83,9 +87,11 @@ footer li a:hover{
 }
 
 .sideNavigation li{
-    background-color: #F2F2F2;
+    background-color: #006595;
     margin: 8px;
     border-radius: 10px;
+    box-shadow: 0px 3px 5px #888888;
+   
        
 }
 .sideNavigation li a{
@@ -93,6 +99,7 @@ footer li a:hover{
     color: black;
     padding: 10px 14px;
     display: block;
+     color:white; 
 }
 .sideNavigation > li > a:hover{
     color: white;
@@ -108,10 +115,6 @@ ul.sideNavigation{
     padding-left: 0;
 }
 
-form{
-    padding: 10px;
-}
-
 .pull-right{
     display: inline-block !important;
 }
@@ -121,7 +124,6 @@ form{
 }
 #alert h3, #parking h3{
   background-color: #518B9C;
-  /*background-color: #FECEAA;*/
     border-bottom: 1px solid black;
     margin: 0;
     
@@ -130,6 +132,11 @@ form{
      position: relative;
      width: 200px;
      vertical-align: top;
+     box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,0.30)
+ }
+ .input-group-btn > .btn{
+     background-color: #1D4757;
+     color: white; 
  }
  #navigation{
      display: inline-block;
@@ -146,12 +153,17 @@ form{
      vertical-align: top; 
  }
  .icons .btn-block{
-      text-align: center;
+    text-align: center;
     padding: 15px;
     border-radius: 25px;
     max-height: 132px;
     background-color: rgba(102,204,255, 0.4);
+  
  }
+   .icons .btn-block > p{
+       z-index: 100;
+       display: block;
+   }
  #toggle-time ul{
      display: none;
  }
@@ -169,6 +181,5 @@ form{
  }
  .listEvents .btn.btn-link:hover{
      background-color: dodgerblue;
-     opacity(0.4); 
+     /*opacity(0.4); */
  }
-

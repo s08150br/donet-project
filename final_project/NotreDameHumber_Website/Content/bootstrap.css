@@ -59,6 +59,7 @@ html {
 
 body {
   margin: 0;
+  
 }
 
 a:focus {
@@ -315,7 +316,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #F4F7F7;
 }
 
 input,
@@ -1245,6 +1246,7 @@ pre code {
 @media (min-width: 1200px) {
   .container {
     max-width: 1170px;
+   
   }
   .col-lg-1,
   .col-lg-2,
@@ -2415,6 +2417,7 @@ input[type="button"].btn-block {
   font-style: normal;
   font-weight: normal;
   line-height: 1;
+ 
 }
 
 .glyphicon-asterisk:before {
@@ -3286,7 +3289,7 @@ input[type="button"].btn-block {
 .dropdown-menu > li > a:focus {
   color: #ffffff;
   text-decoration: none;
-  background-color: #428bca;
+  background-color: #abd0ce;
 }
 
 .dropdown-menu > .active > a,
@@ -4513,10 +4516,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-    background-color: #0B2E38;
+    background-color: #ABD0CE;
     /*border-color: #080808;*/
     position: relative;
     height: 20px;
+    
 }
 
 .navbar-inverse .navbar-brand {
@@ -4534,7 +4538,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #999999;
+  color: #3C7776;
+
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
@@ -4580,7 +4585,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
   color: #ffffff;
-  background-color: #080808;
+  background-color: cadetblue;
 }
 
 .navbar-inverse .navbar-nav > .dropdown > a:hover .caret {
@@ -4602,7 +4607,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 @media (max-width: 767px) {
     .navbar-inverse .navbar-nav > li > a {
-
+        color: black; 
+        background-color: white;
     }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
     border-color: #080808;
@@ -5424,12 +5430,13 @@ a.list-group-item:focus {
 
 .panel-footer {
   padding: 10px 15px;
-  background-color: #f5f5f5;
+  background-color: #006595;
   border-top: 1px solid #dddddd;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
   position: relative;
   bottom: 0;
+  color: white; 
 }
 
 .panel-group .panel {
