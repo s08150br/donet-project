@@ -153,6 +153,9 @@
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AdminEventsController.cs" />
+    <Compile Include="Controllers\AlexDonateController.cs" />
+    <Compile Include="Controllers\AlexFaqController.cs" />
+    <Compile Include="Controllers\AlexSearchDoctorController.cs" />
     <Compile Include="Controllers\Doctor.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -206,6 +209,15 @@
     <Compile Include="Controllers\ParkingMapController.cs" />
     <Compile Include="Controllers\Paypal1Controller.cs" />
     <Compile Include="Controllers\RegisterUserController.cs" />
+    <Compile Include="Controllers\tblDoctor.cs">
+      <DependentUpon>EventsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\tblDonation.cs">
+      <DependentUpon>EventsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\tblFAQ.cs">
+      <DependentUpon>EventsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\UserEventsController.cs" />
     <Compile Include="Controllers\Worker.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
@@ -292,6 +304,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\uploads\" />
+    <Folder Include="Views\AlexDonate\" />
+    <Folder Include="Views\AlexFaq\" />
+    <Folder Include="Views\AlexSearchDoctor\" />
     <Folder Include="Views\test\" />
   </ItemGroup>
   <ItemGroup>
