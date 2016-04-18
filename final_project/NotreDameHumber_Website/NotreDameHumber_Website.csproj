@@ -156,11 +156,7 @@
     <Compile Include="Controllers\Doctor.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\DonateController.cs" />
     <Compile Include="Controllers\Donation.cs">
-      <DependentUpon>EventsModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\Donationtbl.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Event.cs">
@@ -188,7 +184,6 @@
     <Compile Include="Controllers\FAQ.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\FaqController.cs" />
     <Compile Include="Controllers\FeedBack.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -211,16 +206,6 @@
     <Compile Include="Controllers\ParkingMapController.cs" />
     <Compile Include="Controllers\Paypal1Controller.cs" />
     <Compile Include="Controllers\RegisterUserController.cs" />
-    <Compile Include="Controllers\SearchDoctorController.cs" />
-    <Compile Include="Controllers\tblDoctor.cs">
-      <DependentUpon>EventsModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\tblDonation.cs">
-      <DependentUpon>EventsModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\tblFAQ.cs">
-      <DependentUpon>EventsModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\UserEventsController.cs" />
     <Compile Include="Controllers\Worker.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
@@ -307,9 +292,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\uploads\" />
-    <Folder Include="Views\Donate\" />
-    <Folder Include="Views\Faq\" />
-    <Folder Include="Views\SearchDoctor\" />
     <Folder Include="Views\test\" />
   </ItemGroup>
   <ItemGroup>

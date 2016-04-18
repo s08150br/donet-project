@@ -36,9 +36,5 @@ namespace NotreDameHumber_Website.Controllers
         public DbSet<NewsLetter> NewsLetters { get; set; }
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Worker> Workers { get; set; }
-        public DbSet<tblDoctor> tblDoctors { get; set; }
-        public DbSet<tblDonation> tblDonations { get; set; }
-        public DbSet<tblFAQ> tblFAQs { get; set; }
-        public DbSet<Donationtbl> Donationtbls { get; set; }
     }
 }
