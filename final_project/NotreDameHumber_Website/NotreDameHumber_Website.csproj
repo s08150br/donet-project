@@ -123,6 +123,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\Capture.jpg" />
+    <Content Include="Images\D_photos\Ann_Throckmorton.jpg" />
+    <Content Include="Images\D_photos\Brandon_Frost.jpg" />
+    <Content Include="Images\D_photos\Cecile_Dodd.jpg" />
+    <Content Include="Images\D_photos\Doctor.jpg" />
+    <Content Include="Images\D_photos\Earlie_Camp.jpg" />
+    <Content Include="Images\D_photos\Emma_Cook.jpg" />
+    <Content Include="Images\D_photos\Evelyn_Morris.jpg" />
+    <Content Include="Images\D_photos\Joseph_Robinson.jpg" />
+    <Content Include="Images\D_photos\Michael_Hawley.jpg" />
+    <Content Include="Images\D_photos\Nathan_Maldonado.jpg" />
+    <Content Include="Images\D_photos\Rebecca_Adams.jpg" />
     <Content Include="Images\logo-01.png" />
     <Content Include="Images\spinner.gif" />
     <Content Include="Scripts\bootstrap.js" />
@@ -308,6 +319,13 @@
     <Content Include="Views\AlexFaq\Faq_list_user.cshtml" />
     <Content Include="Views\AlexFaq\Faq_create_thanks_user.cshtml" />
     <Content Include="Views\AlexFaq\Faq_edit_admin.cshtml" />
+    <Content Include="Views\AlexSearchDoctor\SearchDoctor_list_admin.cshtml" />
+    <Content Include="Views\AlexSearchDoctor\SearchDoctor_create_admin.cshtml" />
+    <Content Include="Views\AlexSearchDoctor\SearchDoctor_delete_admin.cshtml" />
+    <Content Include="Views\AlexSearchDoctor\SearchDoctor_details_admin.cshtml" />
+    <Content Include="Views\AlexSearchDoctor\SearchDoctor_edit_admin.cshtml" />
+    <Content Include="Views\AlexSearchDoctor\SearchDoctor_list_user.cshtml" />
+    <Content Include="Views\AlexSearchDoctor\SearchDoctor_details_user.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -317,7 +335,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\uploads\" />
-    <Folder Include="Views\AlexSearchDoctor\" />
     <Folder Include="Views\test\" />
   </ItemGroup>
   <ItemGroup>

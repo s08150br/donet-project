@@ -1,0 +1,134 @@
+﻿@model NotreDameHumber_Website.Controllers.tblDoctor
+
+@{
+    ViewBag.Title = "SearchDoctor_details_admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .doctor_links {
+        width: 100%;
+        float: left;
+    }
+
+    .doctor_box {
+        width: 100%;
+    }
+
+    .doctor_name {
+        width: 80%;
+        background-color: #f4f7f7;
+        border: 1px solid;
+        border-color: #e5e5e5;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-bottom: 5px;
+        float: left;
+        text-align: center;
+    }
+
+    .doctor_photo {
+        text-align: center;
+        width: 100%;
+        float: left;
+    }
+
+
+    .doctor_info {
+        width: 100%;
+        float: left;
+        margin-top: 15px;
+        background-color: #f4f7f7;
+        text-align: justify;
+        border: 1px solid;
+        border-color: #e5e5e5;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+</style>
+
+<h2>Information about the doctor</h2>
+
+<div>
+    <hr />
+    <div class="doctor_links">
+        <p>
+            @Html.ActionLink("Edit information about the doctor", "SearchDoctor_edit_admin", new { id = Model.DoctorId }) |
+            @Html.ActionLink("Delete the doctor", "SearchDoctor_delete_admin", new { id = Model.DoctorId }) |
+            @Html.ActionLink("Back to list of doctors", "SearchDoctor_list_admin")
+        </p>
+    </div>
+
+    <div class="doctor_box">
+        <div class="doctor_name">
+            <h3>@Html.DisplayFor(model => model.Name)</h3>
+        </div>
+        <div class="doctor_photo">
+            <img src="@Url.Content(Model.Photo)" />
+        </div>
+        <div class="doctor_info">
+            <p><b>Specialization:</b> @Html.DisplayFor(model => model.Specialization)</p>
+            <p><b>Department:</b> @Html.DisplayFor(model => model.Department)</p>
+            <p><b>Experience:</b> @Html.DisplayFor(model => model.Experience)</p>
+            <p><b>Information:</b> @Html.DisplayFor(model => model.Info)</p>
+        </div>
+    </div>
+
+
+    <!--
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Specialization)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Specialization)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Model.Photo)" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Experience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Experience)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Info)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Info)
+        </dd>
+    </dl>
+    -->
+</div>
+
+

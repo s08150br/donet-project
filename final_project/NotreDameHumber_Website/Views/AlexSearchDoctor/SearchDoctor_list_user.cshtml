@@ -1,0 +1,43 @@
+﻿@model IEnumerable<NotreDameHumber_Website.Controllers.tblDoctor>
+
+@{
+    ViewBag.Title = "SearchDoctor_list_user";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of Doctors</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Specialization)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specialization)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "SearchDoctor_details_user", new { id = item.DoctorId })
+            </td>
+        </tr>
+    }
+
+</table>
