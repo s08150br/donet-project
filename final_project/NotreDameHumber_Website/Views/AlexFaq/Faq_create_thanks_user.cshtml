@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Faq_create_thanks_user";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thank you for your question!</h2>
+<p>Your question will be displayed in the question list after moderation. Wait for an answer!</p>
+
+<div>
+    @Html.ActionLink("List of questions", "Faq_list_user") |
+    @Html.ActionLink("Ask one question more", "Faq_create_user")
+</div>
