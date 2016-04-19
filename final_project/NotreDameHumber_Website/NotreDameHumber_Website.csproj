@@ -122,6 +122,7 @@
     </Content>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\ambulance.JPG" />
     <Content Include="Images\Capture.jpg" />
     <Content Include="Images\D_photos\Ann_Throckmorton.jpg" />
     <Content Include="Images\D_photos\Brandon_Frost.jpg" />
@@ -135,6 +136,7 @@
     <Content Include="Images\D_photos\Nathan_Maldonado.jpg" />
     <Content Include="Images\D_photos\Rebecca_Adams.jpg" />
     <Content Include="Images\logo-01.png" />
+    <Content Include="Images\parking.JPG" />
     <Content Include="Images\spinner.gif" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

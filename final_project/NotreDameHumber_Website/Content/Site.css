@@ -118,16 +118,7 @@ ul.sideNavigation{
 .pull-right{
     display: inline-block !important;
 }
-#alert, #parking{
-    border: 1px solid black;
-    margin-bottom: 3rem;   
-}
-#alert h3, #parking h3{
-  background-color: #518B9C;
-    border-bottom: 1px solid black;
-    margin: 0;
-    
-}
+
  #searchBar{
      position: relative;
      width: 200px;
@@ -168,6 +159,38 @@ ul.sideNavigation{
      display: none;
  }
 
+ #alert, #parking{
+    border: 1px solid black;
+    margin-bottom: 3rem;  
+    border-radius: 18px;
+    box-shadow: 0px 3px 5px #888888;
+}
+ 
+#alert h3, #parking h3{
+    background-color: #1D4757;
+    color: white;
+    padding: 2px 0;
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+   
+}
+#alert img, #parking img{
+    width: 100%; 
+    padding: 8px;
+}
+#alert p, #parking p{
+    padding-top: 8px;
+    padding-right: 8px; 
+    padding-left:8px;
+    width: 100%;
+}
+#alert a, #parking a{
+    text-decoration: none; 
+    color: black;
+}
  /*-------------------Events--------------------*/
  
  .listEvents .btn.btn-link{
