@@ -51,6 +51,7 @@ namespace NotreDameHumber_Website.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Faq_create_user(FormCollection formCollection)
         {
             tblFAQ faq = new tblFAQ();
