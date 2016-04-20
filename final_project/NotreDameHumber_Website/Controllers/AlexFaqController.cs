@@ -53,25 +53,26 @@ namespace NotreDameHumber_Website.Controllers
         [HttpPost]
         public ActionResult Faq_create_user(FormCollection formCollection)
         {
-            tblFAQ donation = new tblFAQ();
+            tblFAQ faq = new tblFAQ();
             HDHDBContext nDHDBContext = new HDHDBContext();
 
             if (formCollection["Name"] == "")
             {
-                donation.Name = "Anonym";
+                faq.Name = "Anonym";
             }
             else
             {
-                donation.Name = formCollection["Name"];
+                faq.Name = formCollection["Name"];
             }
-            donation.Category = formCollection["Category"];
-            donation.Question = formCollection["Question"];
-            donation.Answer = formCollection["Answer"];
-            donation.Date = DateTime.Now;
-            donation.Status = "Invisible";
+            faq.Category = formCollection["Category"];
+            faq.Question = formCollection["Question"];
+            faq.Answer = "Yet to be answered";
+            faq.Date = DateTime.Now;
+            faq.Status = "Invisible";
+            //faq.QuestionId = 99;
 
 
-            nDHDBContext.tblFAQs.Add(donation);
+            nDHDBContext.tblFAQs.Add(faq);
             nDHDBContext.SaveChanges();
 
             return RedirectToAction("Faq_create_thanks_user");

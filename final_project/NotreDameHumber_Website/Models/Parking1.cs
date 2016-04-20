@@ -17,7 +17,7 @@ namespace NotreDameHumber_Website.Models
         public int item_number { get; set; }
 
         [Required(ErrorMessage = "Please inter your name")]
-        [StringLength(100, MinimumLength = 5, ErrorMessage = "Please inter your name")]
+        [StringLength(100, MinimumLength = 1, ErrorMessage = "Please inter your name")]
         public string item_name { get; set; }
 
         //[Required(ErrorMessage = "Do not be left empty")]

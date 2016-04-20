@@ -11,10 +11,11 @@ namespace NotreDameHumber_Website.Controllers
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class FAQ
     {
         public int QuestionId { get; set; }
+       
         public string Question { get; set; }
         public string Answer { get; set; }
     }
