@@ -169,6 +169,7 @@
     <Compile Include="Controllers\AlexDonateController.cs" />
     <Compile Include="Controllers\AlexFaqController.cs" />
     <Compile Include="Controllers\AlexSearchDoctorController.cs" />
+    <Compile Include="Controllers\DisplayEventsController.cs" />
     <Compile Include="Controllers\Doctor.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -221,7 +222,7 @@
     <Compile Include="Controllers\Parking1Controller.cs" />
     <Compile Include="Controllers\ParkingMapController.cs" />
     <Compile Include="Controllers\Paypal1Controller.cs" />
-    <Compile Include="Controllers\RegisterUserController.cs" />
+    <Compile Include="Controllers\RegisterEventController.cs" />
     <Compile Include="Controllers\tblDoctor.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -231,7 +232,6 @@
     <Compile Include="Controllers\tblFAQ.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\UserEventsController.cs" />
     <Compile Include="Controllers\Worker.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -278,11 +278,6 @@
     <Content Include="Views\UserEvents\Details.cshtml" />
     <Content Include="Views\UserEvents\Edit.cshtml" />
     <Content Include="Views\UserEvents\Index.cshtml" />
-    <Content Include="Views\RegisterUser\Create.cshtml" />
-    <Content Include="Views\RegisterUser\Delete.cshtml" />
-    <Content Include="Views\RegisterUser\Details.cshtml" />
-    <Content Include="Views\RegisterUser\Edit.cshtml" />
-    <Content Include="Views\RegisterUser\Index.cshtml" />
     <Content Include="Views\JobsAdmin\Create.cshtml" />
     <Content Include="Views\JobsAdmin\Delete.cshtml" />
     <Content Include="Views\JobsAdmin\Details.cshtml" />
@@ -328,6 +323,16 @@
     <Content Include="Views\AlexSearchDoctor\SearchDoctor_edit_admin.cshtml" />
     <Content Include="Views\AlexSearchDoctor\SearchDoctor_list_user.cshtml" />
     <Content Include="Views\AlexSearchDoctor\SearchDoctor_details_user.cshtml" />
+    <Content Include="Views\DisplayEvents\Create.cshtml" />
+    <Content Include="Views\DisplayEvents\Delete.cshtml" />
+    <Content Include="Views\DisplayEvents\Details.cshtml" />
+    <Content Include="Views\DisplayEvents\Edit.cshtml" />
+    <Content Include="Views\DisplayEvents\Index.cshtml" />
+    <Content Include="Views\RegisterEvent\Create.cshtml" />
+    <Content Include="Views\RegisterEvent\Delete.cshtml" />
+    <Content Include="Views\RegisterEvent\Details.cshtml" />
+    <Content Include="Views\RegisterEvent\Edit.cshtml" />
+    <Content Include="Views\RegisterEvent\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

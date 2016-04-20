@@ -1,17 +1,16 @@
 ﻿@model IEnumerable<NotreDameHumber_Website.Controllers.AdminEvent>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Events";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Events</h2>
 
 @*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
+</p>*@
+    @*<tr>
         <th>
             @Html.DisplayNameFor(model => model.EventName)
         </th>
@@ -45,23 +44,7 @@
         <th></th>
     </tr>*@
 
-@foreach (var item in Model)
-{
-    <div class="listEvents">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-sm-12">
-                <div class="btn btn-link">
-                   
-                    <h2>@Html.DisplayFor(modelItem => item.EventName)</h2>
-                    <h3>@Html.DisplayFor(modelItem => item.Date)</h3>
-                    <p>@Html.DisplayFor(modelItem => item.Description)</p>
-                    @Html.ActionLink("Register for Event", "Create", "RegisterEvent", new { @class = "pull-right"})
-                   
-                   
-                </div>
-            </div>
-        </div>
-    </div>
+@foreach (var item in Model) {
     @*<tr>
         <td>
             @Html.DisplayFor(modelItem => item.EventName)
@@ -94,11 +77,40 @@
             @Html.DisplayFor(modelItem => item.EventWebsite)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EventId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EventId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EventId })
+            
+            @Html.ActionLink("Register for Event", "Create", "RegisterEvent", new { Id = item.EventId }, null)
         </td>
     </tr>*@
+
+
+    <div class="listEvents">
+        <div class="container">
+            <div class="row">
+                @*<div class="col-md-12 col-sm-12 col-xs-12">*@
+              
+                    <div class="col-md-2">
+                        <h2>@Html.DisplayFor(modelItem => item.EventName)</h2>
+                    </div>
+                    <div class="col-md-8">
+                        <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                    </div>
+                    <div class="col-md-2">
+                        <h4>@Html.DisplayFor(modelItem => item.Date)</h4>
+                        <div class="btn">
+                            @Html.ActionLink("Register for Event", "Create", "RegisterEvent") <br />
+                        </div>
+                        <div class="btn">
+                            @Html.ActionLink("View Details", "Details", new { id = item.EventId })
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
 }
 
-@*</table>*@
+

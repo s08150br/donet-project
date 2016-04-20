@@ -11,14 +11,19 @@ namespace NotreDameHumber_Website.Controllers
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class Event
     {
         public int EventsId { get; set; }
+      
         public string EventName { get; set; }
+        [Required(ErrorMessage ="* Please input your first name.")]
         public string FirstName { get; set; }
+        [Required(ErrorMessage ="* Please input your last name.")]
         public string LastName { get; set; }
         public string Date { get; set; }
+        [Required(ErrorMessage = "* Please input Email Address.")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
     }
 }

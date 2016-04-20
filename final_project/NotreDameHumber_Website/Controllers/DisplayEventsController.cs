@@ -9,17 +9,16 @@ using System.Web.Mvc;
 
 namespace NotreDameHumber_Website.Controllers
 {
-    public class UserEventsController : Controller
+    public class DisplayEventsController : Controller
     {
         private HDHDBContext db = new HDHDBContext();
 
-        // GET: UserEvents
+        // GET: DisplayEvents
         public ActionResult Index()
         {
             return View(db.AdminEvents.ToList());
         }
-
-        // GET: UserEvents/Details/5
+        // GET: DisplayEvents/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -34,13 +33,13 @@ namespace NotreDameHumber_Website.Controllers
             return View(adminEvent);
         }
 
-        // GET: UserEvents/Create
+        // GET: DisplayEvents/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: UserEvents/Create
+        // POST: DisplayEvents/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -57,7 +56,7 @@ namespace NotreDameHumber_Website.Controllers
             return View(adminEvent);
         }
 
-        // GET: UserEvents/Edit/5
+        // GET: DisplayEvents/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -72,7 +71,7 @@ namespace NotreDameHumber_Website.Controllers
             return View(adminEvent);
         }
 
-        // POST: UserEvents/Edit/5
+        // POST: DisplayEvents/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -88,7 +87,7 @@ namespace NotreDameHumber_Website.Controllers
             return View(adminEvent);
         }
 
-        // GET: UserEvents/Delete/5
+        // GET: DisplayEvents/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -103,7 +102,7 @@ namespace NotreDameHumber_Website.Controllers
             return View(adminEvent);
         }
 
-        // POST: UserEvents/Delete/5
+        // POST: DisplayEvents/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

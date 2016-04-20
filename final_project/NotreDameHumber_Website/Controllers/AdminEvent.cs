@@ -11,17 +11,28 @@ namespace NotreDameHumber_Website.Controllers
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class AdminEvent
     {
         public int EventId { get; set; }
+        [Required(ErrorMessage ="* Please enter Event Name")]
         public string EventName { get; set; }
+        [Required(ErrorMessage ="* Please enter a brief desciption")]
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
+        [Required(ErrorMessage = "* Please enter Address")]
         public string Address { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yyyy}")]
         public string Date { get; set; }
+        [DataType(DataType.Time)]
         public string StartTime { get; set; }
+        [DataType(DataType.Time)]
         public string EndTime { get; set; }
+        [Required(ErrorMessage = "* Please enter Fee")]
         public string Fee { get; set; }
+        [Required(ErrorMessage = "* Please enter email address")]
+        [DataType(DataType.EmailAddress)]
         public string ContactEmail { get; set; }
         public string Phone { get; set; }
         public string EventWebsite { get; set; }

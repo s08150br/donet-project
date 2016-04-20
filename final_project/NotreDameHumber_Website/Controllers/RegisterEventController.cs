@@ -9,107 +9,110 @@ using System.Web.Mvc;
 
 namespace NotreDameHumber_Website.Controllers
 {
-    public class RegisterUserController : Controller
+    public class RegisterEventController : Controller
     {
         private HDHDBContext db = new HDHDBContext();
 
-        // GET: RegisterUser
+        // GET: RegisterEvent
         public ActionResult Index()
         {
-            return View(db.EventUsers.ToList());
+            return View(db.Events.ToList());
         }
 
-        // GET: RegisterUser/Details/5
+
+        // GET: RegisterEvent/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EventUser eventUser = db.EventUsers.Find(id);
-            if (eventUser == null)
+            Event @event = db.Events.Find(id);
+            if (@event == null)
             {
                 return HttpNotFound();
             }
-            return View(eventUser);
+            return View(@event);
         }
 
-        // GET: RegisterUser/Create
+        // GET: RegisterEvent/Create
         public ActionResult Create()
         {
+           
+            
             return View();
         }
 
-        // POST: RegisterUser/Create
+        // POST: RegisterEvent/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventUsers,Username,Password,Role")] EventUser eventUser)
+        public ActionResult Create([Bind(Include = "EventsId,EventName,FirstName,LastName,Date,Email")] Event @event)
         {
             if (ModelState.IsValid)
             {
-                db.EventUsers.Add(eventUser);
+                db.Events.Add(@event);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(eventUser);
+            return View(@event);
         }
 
-        // GET: RegisterUser/Edit/5
+        // GET: RegisterEvent/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EventUser eventUser = db.EventUsers.Find(id);
-            if (eventUser == null)
+            Event @event = db.Events.Find(id);
+            if (@event == null)
             {
                 return HttpNotFound();
             }
-            return View(eventUser);
+            return View(@event);
         }
 
-        // POST: RegisterUser/Edit/5
+        // POST: RegisterEvent/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EventUsers,Username,Password,Role")] EventUser eventUser)
+        public ActionResult Edit([Bind(Include = "EventsId,EventName,FirstName,LastName,Date,Email")] Event @event)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(eventUser).State = EntityState.Modified;
+                db.Entry(@event).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(eventUser);
+            return View(@event);
         }
 
-        // GET: RegisterUser/Delete/5
+        // GET: RegisterEvent/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EventUser eventUser = db.EventUsers.Find(id);
-            if (eventUser == null)
+            Event @event = db.Events.Find(id);
+            if (@event == null)
             {
                 return HttpNotFound();
             }
-            return View(eventUser);
+            return View(@event);
         }
 
-        // POST: RegisterUser/Delete/5
+        // POST: RegisterEvent/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            EventUser eventUser = db.EventUsers.Find(id);
-            db.EventUsers.Remove(eventUser);
+            Event @event = db.Events.Find(id);
+            db.Events.Remove(@event);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

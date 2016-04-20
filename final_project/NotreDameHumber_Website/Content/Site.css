@@ -15,6 +15,9 @@ header{
     padding-left: 15px;
     padding-right: 15px;
 }
+input.btn{
+    color: white; 
+}
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -193,16 +196,32 @@ ul.sideNavigation{
 }
  /*-------------------Events--------------------*/
  
- .listEvents .btn.btn-link{
+ .listEvents{
      width: 100%;
-     background-color: rgba(98, 166, 222, 0.4);
-     color: aliceblue;
-     border: 1px solid;
-     border-color: rgba(98, 166, 222, 0.4);
-     border-radius:25px;
+     /*background-color: rgba(98, 166, 222, 0.4);*/
+     color: black;
+     border-bottom: 1px solid;
+     /*border-color: rgba(98, 166, 222, 0.4);*/
       margin-bottom: 20px;
  }
+
  .listEvents .btn.btn-link:hover{
-     background-color: dodgerblue;
+     background-color: rgba(98, 166, 222, 0.4);
+     border-radius:25px;
+     text-decoration: none; 
      /*opacity(0.4); */
  }
+ .listEvents .col-md-2 h2{
+     font-size: 25px;
+ }
+ .listEvents .row{
+     padding-bottom: 14px;
+ }
+.col-md-2 .btn a {
+
+    color: white; 
+}
+.col-md-2 .btn{
+    width: 115%;
+    margin: 3px 0;
+}
