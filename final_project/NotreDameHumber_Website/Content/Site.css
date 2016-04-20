@@ -15,7 +15,7 @@ header{
     padding-left: 15px;
     padding-right: 15px;
 }
-input.btn{
+.col-md-8 input.btn{
     color: white; 
 }
 

@@ -54,7 +54,7 @@ namespace NotreDameHumber_Website.Controllers
             {
                 db.Events.Add(@event);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "DisplayEvents");
             }
 
             return View(@event);
