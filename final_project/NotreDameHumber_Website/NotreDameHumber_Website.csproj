@@ -303,13 +303,6 @@
     <Content Include="Views\Paypal1\Index.cshtml" />
     <Content Include="Views\Paypal1\GetDataPaypal.cshtml" />
     <Content Include="Views\ParkingMap\Index.cshtml" />
-    <Content Include="Views\AlexDonate\Donate_list_admin.cshtml" />
-    <Content Include="Views\AlexDonate\Donate_list_order_name_admin.cshtml" />
-    <Content Include="Views\AlexDonate\Donate_list_order_amount_admin.cshtml" />
-    <Content Include="Views\AlexDonate\Donate_delete_admin.cshtml" />
-    <Content Include="Views\AlexDonate\Donate_edit_admin.cshtml" />
-    <Content Include="Views\AlexDonate\Donate_create_user.cshtml" />
-    <Content Include="Views\AlexDonate\Donate_create_button_user.cshtml" />
     <Content Include="Views\AlexFaq\Faq_list_admin.cshtml" />
     <Content Include="Views\AlexFaq\Faq_delete_admin.cshtml" />
     <Content Include="Views\AlexFaq\Faq_create_user.cshtml" />
