@@ -303,12 +303,6 @@
     <Content Include="Views\Paypal1\Index.cshtml" />
     <Content Include="Views\Paypal1\GetDataPaypal.cshtml" />
     <Content Include="Views\ParkingMap\Index.cshtml" />
-    <Content Include="Views\AlexFaq\Faq_list_admin.cshtml" />
-    <Content Include="Views\AlexFaq\Faq_delete_admin.cshtml" />
-    <Content Include="Views\AlexFaq\Faq_create_user.cshtml" />
-    <Content Include="Views\AlexFaq\Faq_list_user.cshtml" />
-    <Content Include="Views\AlexFaq\Faq_create_thanks_user.cshtml" />
-    <Content Include="Views\AlexFaq\Faq_edit_admin.cshtml" />
     <Content Include="Views\AlexSearchDoctor\SearchDoctor_list_admin.cshtml" />
     <Content Include="Views\AlexSearchDoctor\SearchDoctor_create_admin.cshtml" />
     <Content Include="Views\AlexSearchDoctor\SearchDoctor_delete_admin.cshtml" />
@@ -334,11 +328,11 @@
     <Content Include="Views\Donation\Index_order_name_admin.cshtml" />
     <Content Include="Views\Donation\Create_button_user.cshtml" />
     <Content Include="Views\Faq\Delete_admin.cshtml" />
-    <Content Include="Views\Faq\Details.cshtml" />
-    <Content Include="Views\Faq\Edit.cshtml" />
+    <Content Include="Views\Faq\Edit_admin.cshtml" />
     <Content Include="Views\Faq\Index_admin.cshtml" />
     <Content Include="Views\Faq\Index_user.cshtml" />
     <Content Include="Views\Faq\Create_user.cshtml" />
+    <Content Include="Views\Faq\Create_thanks_user.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

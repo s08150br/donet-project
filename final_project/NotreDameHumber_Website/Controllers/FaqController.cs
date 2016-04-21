@@ -16,7 +16,11 @@ namespace NotreDameHumber_Website.Controllers
         // Index_admin (Admin page)
         public ActionResult Index_admin()
         {
-            return View(db.tblFAQs.ToList());
+            var faq = from p in db.tblFAQs
+                      orderby p.QuestionId descending
+                      select p;
+
+            return View(faq);
         }
 
         // Index_user (Unregistered or registered user)
@@ -48,22 +52,46 @@ namespace NotreDameHumber_Website.Controllers
                 tblFAQ.Status = "Invisible";
                 db.tblFAQs.Add(tblFAQ);
                 db.SaveChanges();
-                return RedirectToAction("Index_user");
+                return RedirectToAction("Create_thanks_user");
             }
 
             return View(tblFAQ);
         }
 
 
+        // Edit_admin (Admin page)
+        public ActionResult Edit_admin(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            tblFAQ tblFAQ = db.tblFAQs.Find(id);
+            if (tblFAQ == null)
+            {
+                return HttpNotFound();
+            }
+            return View(tblFAQ);
+        }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit_admin([Bind(Include = "QuestionId,Name,Category,Question,Answer,Date,Status")] tblFAQ tblFAQ)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(tblFAQ).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index_admin");
+            }
+            return View(tblFAQ);
+        }
 
-
-
-
-
-
-
-
+        // Thank you page (Unregistered or registered user)
+        public ActionResult Create_thanks_user()
+        {
+            return View();
+        }
 
 
 
@@ -89,7 +117,7 @@ namespace NotreDameHumber_Website.Controllers
             tblFAQ tblFAQ = db.tblFAQs.Find(id);
             db.tblFAQs.Remove(tblFAQ);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index_admin");
         }
 
         protected override void Dispose(bool disposing)
@@ -103,43 +131,6 @@ namespace NotreDameHumber_Website.Controllers
 
         //-------------------------------------------------------------------
 
-
-
-
-        
-
-        
-
-        // GET: Faq/Edit/5
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            tblFAQ tblFAQ = db.tblFAQs.Find(id);
-            if (tblFAQ == null)
-            {
-                return HttpNotFound();
-            }
-            return View(tblFAQ);
-        }
-
-        // POST: Faq/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "QuestionId,Name,Category,Question,Answer,Date,Status")] tblFAQ tblFAQ)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(tblFAQ).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(tblFAQ);
-        }
 
         
     }

@@ -25,6 +25,7 @@ namespace NotreDameHumber_Website.Controllers
         [Required(ErrorMessage = "* Please include Question")]
         public string Question { get; set; }
 
+        [Required(ErrorMessage = "* Please include Answer")]
         public string Answer { get; set; }
 
         public Nullable<System.DateTime> Date { get; set; }

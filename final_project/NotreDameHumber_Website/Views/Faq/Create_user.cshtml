@@ -1,22 +1,21 @@
 ﻿@model NotreDameHumber_Website.Controllers.tblFAQ
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Ask the question";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<h2>Ask the question</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>tblFAQ</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">Name</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
@@ -24,17 +23,22 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Category, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">Category&nbsp;*</label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Category, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownList("Category", new List<SelectListItem> {
+                   new SelectListItem {Text="General", Value="General" },
+                   new SelectListItem {Text="Insurnce", Value="Insurnce" },
+                   new SelectListItem {Text="Donation", Value="Donation" },
+                   new SelectListItem {Text="Services", Value="Services" }
+                })
                 @Html.ValidationMessageFor(model => model.Category, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Question, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">Question&nbsp;*</label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Question, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextArea("Question", new { cols = 60, rows = 10, @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Question, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -49,5 +53,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to list of questions", "Index_user")
 </div>

@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<NotreDameHumber_Website.Controllers.tblFAQ>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "List of questions";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>List of questions</h2>
 
 
 <table class="table">
@@ -52,8 +52,7 @@
             @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.QuestionId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.QuestionId }) |
+            @Html.ActionLink("Answer", "Edit_admin", new { id=item.QuestionId }) |
             @Html.ActionLink("Delete", "Delete_admin", new { id=item.QuestionId })
         </td>
     </tr>
