@@ -1,0 +1,72 @@
+﻿@model NotreDameHumber_Website.Controllers.tblDonation
+
+@{
+    ViewBag.Title = "Delete information about Donation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete information about Donation</h2>
+
+<h3>Are you sure you want to delete information about this Donation?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Name:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            Amount:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            Email:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            Address:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            Phone:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            Registration:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Regdate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List of Donations", "Index_admin", "Donation")
+        </div>
+    }
+</div>

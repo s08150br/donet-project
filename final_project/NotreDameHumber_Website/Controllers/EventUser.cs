@@ -14,7 +14,6 @@ namespace NotreDameHumber_Website.Controllers
     
     public partial class EventUser
     {
-      
         public int EventUsers { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }

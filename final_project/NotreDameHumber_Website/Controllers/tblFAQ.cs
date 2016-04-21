@@ -11,27 +11,15 @@ namespace NotreDameHumber_Website.Controllers
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    //using System.ComponentModel.DataAnnotations.Schema;
-
-  
+    
     public partial class tblFAQ
     {
-        [Key]
         public int QuestionId { get; set; }
-
-
         public string Name { get; set; }
-
-       
         public string Category { get; set; }
-
-        [Required(ErrorMessage = "Please enter your question")]
         public string Question { get; set; }
-
         public string Answer { get; set; }
-       
-        public System.DateTime Date { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
         public string Status { get; set; }
     }
 }

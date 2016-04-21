@@ -166,7 +166,6 @@
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AdminEventsController.cs" />
-    <Compile Include="Controllers\AlexDonateController.cs" />
     <Compile Include="Controllers\AlexFaqController.cs" />
     <Compile Include="Controllers\AlexSearchDoctorController.cs" />
     <Compile Include="Controllers\DisplayEventsController.cs" />
@@ -176,6 +175,7 @@
     <Compile Include="Controllers\Donation.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\DonationController.cs" />
     <Compile Include="Controllers\Event.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -333,6 +333,13 @@
     <Content Include="Views\RegisterEvent\Details.cshtml" />
     <Content Include="Views\RegisterEvent\Edit.cshtml" />
     <Content Include="Views\RegisterEvent\Index.cshtml" />
+    <Content Include="Views\Donation\Create_user.cshtml" />
+    <Content Include="Views\Donation\Delete_admin.cshtml" />
+    <Content Include="Views\Donation\Edit_admin.cshtml" />
+    <Content Include="Views\Donation\Index_admin.cshtml" />
+    <Content Include="Views\Donation\Index_order_amount_admin.cshtml" />
+    <Content Include="Views\Donation\Index_order_name_admin.cshtml" />
+    <Content Include="Views\Donation\Create_button_user.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
