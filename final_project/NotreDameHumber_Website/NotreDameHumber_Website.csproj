@@ -166,7 +166,6 @@
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AdminEventsController.cs" />
-    <Compile Include="Controllers\AlexSearchDoctorController.cs" />
     <Compile Include="Controllers\DisplayEventsController.cs" />
     <Compile Include="Controllers\Doctor.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
@@ -223,6 +222,7 @@
     <Compile Include="Controllers\ParkingMapController.cs" />
     <Compile Include="Controllers\Paypal1Controller.cs" />
     <Compile Include="Controllers\RegisterEventController.cs" />
+    <Compile Include="Controllers\SearchDoctorController.cs" />
     <Compile Include="Controllers\tblDoctor.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -333,6 +333,11 @@
     <Content Include="Views\Faq\Index_user.cshtml" />
     <Content Include="Views\Faq\Create_user.cshtml" />
     <Content Include="Views\Faq\Create_thanks_user.cshtml" />
+    <Content Include="Views\SearchDoctor\Create.cshtml" />
+    <Content Include="Views\SearchDoctor\Delete.cshtml" />
+    <Content Include="Views\SearchDoctor\Details.cshtml" />
+    <Content Include="Views\SearchDoctor\Edit.cshtml" />
+    <Content Include="Views\SearchDoctor\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
