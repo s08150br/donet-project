@@ -166,7 +166,6 @@
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AdminEventsController.cs" />
-    <Compile Include="Controllers\AlexFaqController.cs" />
     <Compile Include="Controllers\AlexSearchDoctorController.cs" />
     <Compile Include="Controllers\DisplayEventsController.cs" />
     <Compile Include="Controllers\Doctor.cs">
@@ -201,6 +200,7 @@
     <Compile Include="Controllers\FAQ.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\FaqController.cs" />
     <Compile Include="Controllers\FeedBack.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -333,6 +333,12 @@
     <Content Include="Views\Donation\Index_order_amount_admin.cshtml" />
     <Content Include="Views\Donation\Index_order_name_admin.cshtml" />
     <Content Include="Views\Donation\Create_button_user.cshtml" />
+    <Content Include="Views\Faq\Delete_admin.cshtml" />
+    <Content Include="Views\Faq\Details.cshtml" />
+    <Content Include="Views\Faq\Edit.cshtml" />
+    <Content Include="Views\Faq\Index_admin.cshtml" />
+    <Content Include="Views\Faq\Index_user.cshtml" />
+    <Content Include="Views\Faq\Create_user.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
