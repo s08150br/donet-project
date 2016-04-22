@@ -1,0 +1,43 @@
+﻿
+
+
+    #sd_box_1{
+        width: 100%;
+        float:left;
+        margin-bottom:20px;
+    }
+
+    #sd_box_2{
+        width: 100%;
+        float:left;
+    }
+
+    #sd_left_col{
+        width:240px;
+        height:256px;
+        float:left;
+    }
+
+    #sd_right_col{
+        margin-left:260px;
+       
+        border-radius: 10px;
+        padding: 5px;
+        box-shadow: 0 0 2px 1px rgba(0,0,0,0.15) ;
+    }
+
+    @media all and (max-width: 767px) {
+
+        #sd_left_col{
+        width:100%;
+        float:left;
+        text-align:center;
+        }
+
+        #sd_right_col{
+        width:100%;
+        margin-top: 20px;
+        margin-left:0px;
+        float:left;
+        }
+    }

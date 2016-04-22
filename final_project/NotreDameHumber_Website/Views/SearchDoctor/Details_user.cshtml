@@ -5,62 +5,31 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<link href="~/Content/sd_details_delete_style.css" rel="stylesheet" />
+
 <h2>Information about the doctor</h2>
 
-<div>
+<div id="sd_box_1">
 
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+    <div id="sd_left_col">
+        <img src="@Url.Content(Model.Photo)" />
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Specialization)
-        </dt>
+    <div id="sd_right_col">
+        <p><b>Name:</b> @Html.DisplayFor(model => model.Name)</p>
+        <p><b>Specialization:</b> @Html.DisplayFor(model => model.Specialization)</p>
+        <p><b>Department:</b> @Html.DisplayFor(model => model.Department)</p>
+        <p><b>Experience:</b> @Html.DisplayFor(model => model.Experience)</p>
+        <p><b>Info:</b> @Html.DisplayFor(model => model.Info)</p>
 
-        <dd>
-            @Html.DisplayFor(model => model.Specialization)
-        </dd>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Department)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Department)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Photo)
-        </dt>
-
-        <dd>
-            <img src="@Url.Content(Model.Photo)" />
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Experience)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Experience)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Info)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Info)
-        </dd>
-
-    </dl>
 </div>
-<p>
-    @Html.ActionLink("Back to list of doctors", "Index_user")
-</p>
+
+<div id="sd_box_2">
+    <p>
+        @Html.ActionLink("Back to list of doctors", "Index_user")
+    </p>
+</div>
