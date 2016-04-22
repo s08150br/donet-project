@@ -19,7 +19,7 @@ namespace NotreDameHumber_Website.Controllers
             var faq = from p in db.tblFAQs
                       orderby p.QuestionId descending
                       select p;
-            //added this commeent
+            
 
             return View(faq);
         }
