@@ -25,7 +25,7 @@ namespace NotreDameHumber_Website.Controllers
         [Required(ErrorMessage = "* Please include Department")]
         public string Department { get; set; }
 
-        [Required(ErrorMessage = "* Please include Photo")]
+
         public string Photo { get; set; }
 
         [Required(ErrorMessage = "* Please include Experience")]
