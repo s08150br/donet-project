@@ -167,6 +167,7 @@
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AdminEventsController.cs" />
+    <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\DisplayEventsController.cs" />
     <Compile Include="Controllers\Doctor.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
@@ -336,6 +337,7 @@
     <Content Include="Views\SearchDoctor\Index_admin.cshtml" />
     <Content Include="Views\SearchDoctor\Index_user.cshtml" />
     <Content Include="Views\SearchDoctor\Details_admin.cshtml" />
+    <Content Include="Views\Checkout\Checkout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

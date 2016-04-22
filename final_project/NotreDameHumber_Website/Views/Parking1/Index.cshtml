@@ -59,7 +59,8 @@
             </div>
 
             <button type="submit" class="btn btn-success">(1*) Submit</button>
-            @Html.ActionLink("(2*)Pay Right Now", "Index", new { controller = "Paypal1" }, new { @class = "btn btn-primary" })
+           // @Html.ActionLink("(2*)Pay Right Now", "Index", new { controller = "Paypal1" }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Submit", "Checkout", "Checkout", new { @class= "btn btn-default"})
         }
         <div class="col-md-12">
             
