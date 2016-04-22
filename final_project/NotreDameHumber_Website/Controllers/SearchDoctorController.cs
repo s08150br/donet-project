@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -71,21 +72,48 @@ namespace NotreDameHumber_Website.Controllers
             return View();
         }
 
+        
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Create_admin([Bind(Include = "DoctorId,Name,Specialization,Department,Photo,Experience,Info")] tblDoctor tblDoctor)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.tblDoctors.Add(tblDoctor);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index_admin");
+        //    }
+
+        //    return View(tblDoctor);
+        //}
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create_admin([Bind(Include = "DoctorId,Name,Specialization,Department,Photo,Experience,Info")] tblDoctor tblDoctor)
+        public ActionResult Create_admin(HttpPostedFileBase file, string name, string specialization, string department, string experience, string info, tblDoctor doctor)
         {
+            HDHDBContext db = new HDHDBContext();
             if (ModelState.IsValid)
             {
-                db.tblDoctors.Add(tblDoctor);
-                db.SaveChanges();
+                if (file.ContentLength > 0)
+                {
+                    var fileName = Path.GetFileName(file.FileName);
+                    doctor.Name = name;
+                    doctor.Specialization = specialization;
+                    doctor.Department = department;
+                    doctor.Experience = experience;
+                    doctor.Info = info;
+                    doctor.Photo = "~/Images/D_photos/" + fileName;
+
+                    db.tblDoctors.Add(doctor);
+                    db.SaveChanges();
+                    var path = Path.Combine(Server.MapPath("~/Images/D_photos"), fileName);
+                    file.SaveAs(path);
+
+                }
                 return RedirectToAction("Index_admin");
             }
-
-            return View(tblDoctor);
+            return View(doctor);
         }
-
 
 
         // Edit_admin (Admin page)
@@ -103,20 +131,47 @@ namespace NotreDameHumber_Website.Controllers
             return View(tblDoctor);
         }
 
-        
+
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Edit_admin([Bind(Include = "DoctorId,Name,Specialization,Department,Photo,Experience,Info")] tblDoctor tblDoctor)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Entry(tblDoctor).State = EntityState.Modified;
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index_admin");
+        //    }
+        //    return View(tblDoctor);
+        //}
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit_admin([Bind(Include = "DoctorId,Name,Specialization,Department,Photo,Experience,Info")] tblDoctor tblDoctor)
+        public ActionResult Edit_admin(HttpPostedFileBase file, string name, string specialization, string department, string experience, string info, tblDoctor doctor)
         {
+            HDHDBContext db = new HDHDBContext();
             if (ModelState.IsValid)
             {
-                db.Entry(tblDoctor).State = EntityState.Modified;
-                db.SaveChanges();
+                if (file.ContentLength > 0)
+                {
+                    var fileName = Path.GetFileName(file.FileName);
+                    doctor.Name = name;
+                    doctor.Specialization = specialization;
+                    doctor.Department = department;
+                    doctor.Experience = experience;
+                    doctor.Info = info;
+                    doctor.Photo = "~/Images/D_photos/" + fileName;
+
+                    db.Entry(doctor).State = EntityState.Modified;
+                    db.SaveChanges();
+                    var path = Path.Combine(Server.MapPath("~/Images/D_photos"), fileName);
+                    file.SaveAs(path);
+
+                }
                 return RedirectToAction("Index_admin");
             }
-            return View(tblDoctor);
+            return View(doctor);
         }
-
 
 
         // Delete_admin (Admin page)
@@ -135,13 +190,29 @@ namespace NotreDameHumber_Website.Controllers
         }
 
 
+        //[HttpPost, ActionName("Delete_admin")]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult DeleteConfirmed(int id)
+        //{
+        //    tblDoctor tblDoctor = db.tblDoctors.Find(id);
+        //    db.tblDoctors.Remove(tblDoctor);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index_admin");
+        //}
+
+
         [HttpPost, ActionName("Delete_admin")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             tblDoctor tblDoctor = db.tblDoctors.Find(id);
             db.tblDoctors.Remove(tblDoctor);
+
+            string fullPath = Request.MapPath(tblDoctor.Photo);
+
+            System.IO.File.Delete(fullPath);
             db.SaveChanges();
+
             return RedirectToAction("Index_admin");
         }
 
