@@ -31,7 +31,7 @@ namespace NotreDameHumber_Website.Controllers
         [Required(ErrorMessage = "* Please include Experience")]
         public string Experience { get; set; }
 
-        [Required(ErrorMessage = "* Please include Information")]
+        [Required(ErrorMessage = "* Please include Info")]
         public string Info { get; set; }
     }
 }

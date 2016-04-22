@@ -303,12 +303,7 @@
     <Content Include="Views\Paypal1\Index.cshtml" />
     <Content Include="Views\Paypal1\GetDataPaypal.cshtml" />
     <Content Include="Views\ParkingMap\Index.cshtml" />
-    <Content Include="Views\AlexSearchDoctor\SearchDoctor_list_admin.cshtml" />
-    <Content Include="Views\AlexSearchDoctor\SearchDoctor_create_admin.cshtml" />
-    <Content Include="Views\AlexSearchDoctor\SearchDoctor_delete_admin.cshtml" />
     <Content Include="Views\AlexSearchDoctor\SearchDoctor_details_admin.cshtml" />
-    <Content Include="Views\AlexSearchDoctor\SearchDoctor_edit_admin.cshtml" />
-    <Content Include="Views\AlexSearchDoctor\SearchDoctor_list_user.cshtml" />
     <Content Include="Views\AlexSearchDoctor\SearchDoctor_details_user.cshtml" />
     <Content Include="Views\DisplayEvents\Create.cshtml" />
     <Content Include="Views\DisplayEvents\Delete.cshtml" />
@@ -333,11 +328,13 @@
     <Content Include="Views\Faq\Index_user.cshtml" />
     <Content Include="Views\Faq\Create_user.cshtml" />
     <Content Include="Views\Faq\Create_thanks_user.cshtml" />
-    <Content Include="Views\SearchDoctor\Create.cshtml" />
-    <Content Include="Views\SearchDoctor\Delete.cshtml" />
-    <Content Include="Views\SearchDoctor\Details.cshtml" />
-    <Content Include="Views\SearchDoctor\Edit.cshtml" />
-    <Content Include="Views\SearchDoctor\Index.cshtml" />
+    <Content Include="Views\SearchDoctor\Create_admin.cshtml" />
+    <Content Include="Views\SearchDoctor\Delete_admin.cshtml" />
+    <Content Include="Views\SearchDoctor\Details_user.cshtml" />
+    <Content Include="Views\SearchDoctor\Edit_admin.cshtml" />
+    <Content Include="Views\SearchDoctor\Index_admin.cshtml" />
+    <Content Include="Views\SearchDoctor\Index_user.cshtml" />
+    <Content Include="Views\SearchDoctor\Details_admin.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

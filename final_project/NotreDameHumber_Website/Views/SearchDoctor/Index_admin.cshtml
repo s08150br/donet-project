@@ -1,0 +1,46 @@
+﻿@model IEnumerable<NotreDameHumber_Website.Controllers.tblDoctor>
+
+@{
+    ViewBag.Title = "List of Doctors";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of Doctors</h2>
+
+<p>
+    @Html.ActionLink("Create new profile", "Create_admin")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Specialization)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Specialization)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit_admin", new { id=item.DoctorId }) |
+            @Html.ActionLink("Details", "Details_admin", new { id=item.DoctorId }) |
+            @Html.ActionLink("Delete", "Delete_admin", new { id=item.DoctorId })
+        </td>
+    </tr>
+}
+
+</table>
