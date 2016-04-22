@@ -24,20 +24,20 @@
             @Html.ValidationSummary(true)
 
             <div class="form-group">
-                <label for="item_name">Your mame</label>
-                @Html.TextBoxFor(x => x.item_name, new { @class = "form-control", placeholder = "Your mame" })
+                <label for="item_name">Your name</label>
+                @Html.TextBoxFor(x => x.item_name, new { @class = "form-control", placeholder = "Your name" })
                 @Html.ValidationMessageFor(x => x.item_name)
             </div>
 
             <div class="form-group">
-                <label for="item_number">Cars number</label>
-                @Html.TextBoxFor(x => x.item_number, new { @class = "form-control", placeholder = "Cars number" })
+                <label for="item_number">Car plate last 3 numbers</label>
+                @Html.TextBoxFor(x => x.item_number, new { @class = "form-control", placeholder = "Ex. 123" })
                 @Html.ValidationMessageFor(x => x.item_number)
             </div>
 
             <div class="form-group">
                 <label for="amount">price:$4/Hours</label>
-                @Html.HiddenFor(x => x.amount, new { @Value = 4, @class = "form-control", placeholder = "price" })
+                @Html.HiddenFor(x => x.amount, new { @Value = 4, @class = "form-control", placeholder = "" })
                 @Html.ValidationMessageFor(x => x.amount )
                 <script>
                    
