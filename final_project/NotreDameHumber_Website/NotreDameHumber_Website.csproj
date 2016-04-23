@@ -328,7 +328,6 @@
     <Content Include="Views\Faq\Edit_admin.cshtml" />
     <Content Include="Views\Faq\Index_admin.cshtml" />
     <Content Include="Views\Faq\Index_user.cshtml" />
-    <Content Include="Views\Faq\Create_user.cshtml" />
     <Content Include="Views\Faq\Create_thanks_user.cshtml" />
     <Content Include="Views\SearchDoctor\Create_admin.cshtml" />
     <Content Include="Views\SearchDoctor\Delete_admin.cshtml" />
@@ -338,6 +337,7 @@
     <Content Include="Views\SearchDoctor\Index_user.cshtml" />
     <Content Include="Views\SearchDoctor\Details_admin.cshtml" />
     <Content Include="Views\Checkout\Checkout.cshtml" />
+    <Content Include="Views\Faq\Create_user.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
