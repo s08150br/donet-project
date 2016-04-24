@@ -158,6 +158,16 @@
       <DependentUpon>Appointment.edmx</DependentUpon>
       <LastGenOutput>Appointment1.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\Menus.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Menus.edmx</DependentUpon>
+      <LastGenOutput>Menus.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Menus.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Menus.edmx</DependentUpon>
+      <LastGenOutput>Menus.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Controllers\EventsModel.edmx">
@@ -173,6 +183,13 @@
     </EntityDeploy>
     <Content Include="Models\Appointment.edmx.diagram">
       <DependentUpon>Appointment.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Menus.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Menus.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Menus.edmx.diagram">
+      <DependentUpon>Menus.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -241,6 +258,7 @@
     </Compile>
     <Compile Include="Controllers\JobPostController.cs" />
     <Compile Include="Controllers\JobsAdminController.cs" />
+    <Compile Include="Controllers\MenusController.cs" />
     <Compile Include="Controllers\NewsLetter.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -289,6 +307,24 @@
     </Compile>
     <Compile Include="Models\DBContext.cs" />
     <Compile Include="Models\GetDataPaypal1.cs" />
+    <Compile Include="Models\Menu.cs">
+      <DependentUpon>Menus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Menus.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Menus.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Menus.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Menus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Menus.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Menus.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Newsletter.cs" />
     <Compile Include="Models\NewsLetterContext.cs" />
     <Compile Include="Models\Order.cs" />
@@ -409,6 +445,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\uploads\" />
+    <Folder Include="Views\Menus\" />
     <Folder Include="Views\test\" />
   </ItemGroup>
   <ItemGroup>
