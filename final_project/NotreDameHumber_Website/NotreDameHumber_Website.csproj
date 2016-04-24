@@ -103,9 +103,9 @@
     <Content Include="App_Data\HDHDB_log.ldf">
       <DependentUpon>HDHDB.mdf</DependentUpon>
     </Content>
-    <Content Include="App_Data\NotreDameDB.mdf" />
-    <Content Include="App_Data\NotreDameDB_log.ldf">
-      <DependentUpon>NotreDameDB.mdf</DependentUpon>
+    <Content Include="App_Data\NotreDame.mdf" />
+    <Content Include="App_Data\NotreDame_log.ldf">
+      <DependentUpon>NotreDame.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -139,6 +139,16 @@
     <Content Include="Images\logo-01.png" />
     <Content Include="Images\parking.JPG" />
     <Content Include="Images\spinner.gif" />
+    <Content Include="Models\Appointment.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Appointment.edmx</DependentUpon>
+      <LastGenOutput>Appointment.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Appointment.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Appointment.edmx</DependentUpon>
+      <LastGenOutput>Appointment1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Controllers\EventsModel.edmx">
@@ -147,6 +157,13 @@
     </EntityDeploy>
     <Content Include="Controllers\EventsModel.edmx.diagram">
       <DependentUpon>EventsModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Appointment.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Appointment.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Appointment.edmx.diagram">
+      <DependentUpon>Appointment.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -224,6 +241,7 @@
     <Compile Include="Controllers\Parking1Controller.cs" />
     <Compile Include="Controllers\ParkingMapController.cs" />
     <Compile Include="Controllers\Paypal1Controller.cs" />
+    <Compile Include="Controllers\PublicAppointmentController.cs" />
     <Compile Include="Controllers\RegisterEventController.cs" />
     <Compile Include="Controllers\SearchDoctorController.cs" />
     <Compile Include="Controllers\tblDoctor.cs">
@@ -241,12 +259,36 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Appointment.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Appointment.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Appointment.cs">
+      <DependentUpon>Appointment.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Appointment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Appointment.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Appointment1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Appointment.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DBContext.cs" />
     <Compile Include="Models\GetDataPaypal1.cs" />
     <Compile Include="Models\Newsletter.cs" />
     <Compile Include="Models\NewsLetterContext.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Parking1.cs" />
+    <Compile Include="Models\Service.cs">
+      <DependentUpon>Appointment.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Therapist.cs">
+      <DependentUpon>Appointment.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -342,6 +384,7 @@
     <Content Include="Views\Faq\Index_without_answers_admin.cshtml" />
     <Content Include="Views\Faq\Index_with_answers_admin.cshtml" />
     <Content Include="Views\AdminView\Index.cshtml" />
+    <Content Include="Views\PublicAppointment\Appointment.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
