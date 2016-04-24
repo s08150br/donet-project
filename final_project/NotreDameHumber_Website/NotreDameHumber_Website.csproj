@@ -338,6 +338,8 @@
     <Content Include="Views\SearchDoctor\Details_admin.cshtml" />
     <Content Include="Views\Checkout\Checkout.cshtml" />
     <Content Include="Views\Faq\Create_user.cshtml" />
+    <Content Include="Views\Faq\Index_without_answers_admin.cshtml" />
+    <Content Include="Views\Faq\Index_with_answers_admin.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

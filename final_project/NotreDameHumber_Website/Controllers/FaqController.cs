@@ -20,6 +20,21 @@ namespace NotreDameHumber_Website.Controllers
                       orderby p.QuestionId descending
                       select p;
             
+            return View(faq);
+        }
+
+        // Index_with_anwers_admin (Admin page)
+        public ActionResult Index_with_answers_admin()
+        {
+            var faq = db.tblFAQs.Where(b => b.Answer !=  null).OrderByDescending(b => b.QuestionId).ToList();
+
+            return View(faq);
+        }
+
+        // Index_without_anwers_admin (Admin page)
+        public ActionResult Index_without_answers_admin()
+        {
+            var faq = db.tblFAQs.Where(b => b.Answer == null).OrderByDescending(b => b.QuestionId).ToList();
 
             return View(faq);
         }
