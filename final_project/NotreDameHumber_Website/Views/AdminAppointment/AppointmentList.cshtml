@@ -1,0 +1,115 @@
+﻿@*@model IEnumerable<NotreDameHumber_Website.Models.Appointment>*@
+
+@model PagedList.IPagedList<NotreDameHumber_Website.Models.Appointment>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Appointments List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Appointments List</h2>
+
+<p>
+    @Html.ActionLink("Create New Appointment", "Create")
+</p>
+
+    @using (Html.BeginForm("AppointmentList", "AdminAppointment", FormMethod.Get))
+    {
+    <p>
+        Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+    }
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Firstname)*@
+            @Html.ActionLink("Firstname", "AppointmentList", new { sortOrder = ViewBag.FirstnameSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Html.ActionLink("Lastname", "AppointmentList", new { sortOrder = ViewBag.LastnameSortParm, currentFilter = ViewBag.CurrentFilter })
+            @*@Html.DisplayNameFor(model => model.Lastname)*@
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>*@
+        <th>
+            @Html.ActionLink("Preferred Date", "AppointmentList", new { sortOrder = ViewBag.PreferredDateSortParm, currentFilter = ViewBag.CurrentFilter })
+            @*@Html.DisplayNameFor(model => model.PreferredDate)*@
+        </th>
+        <th>
+            @Html.ActionLink("Preferred Time", "AppointmentList", new { sortOrder = ViewBag.PreferredTimeSortParm, currentFilter = ViewBag.CurrentFilter })
+            @*@Html.DisplayNameFor(model => model.PreferredTime)*@
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Service)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Therapist)
+        </th>*@
+        <th>
+            @Html.ActionLink("Set", "AppointmentList", new { sortOrder = ViewBag.SetSortParm, currentFilter = ViewBag.CurrentFilter })
+            @*@Html.DisplayNameFor(model => model.Set)*@
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lastname)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.BirthDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.PreferredDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreferredTime)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Service)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Therapist)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Set)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("AppointmentList",
+new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

@@ -1,0 +1,115 @@
+﻿@model NotreDameHumber_Website.Models.Appointment
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete Appointment</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <!--<h4>Appointment</h4>-->
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreferredDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreferredDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreferredTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreferredTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Service)
+        </dt>
+
+        <dd>
+            @ViewBag.ServiceName
+            @*@Html.DisplayFor(model => model.Service)*@
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Therapist)
+        </dt>
+
+        <dd>
+            @ViewBag.TherapistName
+            @*@Html.DisplayFor(model => model.Therapist)*@
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Set)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Set)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "AppointmentList")
+        </div>
+    }
+</div>

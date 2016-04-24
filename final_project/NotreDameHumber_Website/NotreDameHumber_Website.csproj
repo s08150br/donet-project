@@ -56,6 +56,14 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -109,6 +117,7 @@
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Content\sd_details_delete_style.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Controllers\EventsModel.Context.tt">
@@ -180,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminAppointmentController.cs" />
     <Compile Include="Controllers\AdminEvent.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -385,6 +395,11 @@
     <Content Include="Views\Faq\Index_with_answers_admin.cshtml" />
     <Content Include="Views\AdminView\Index.cshtml" />
     <Content Include="Views\PublicAppointment\Appointment.cshtml" />
+    <Content Include="Views\AdminAppointment\AppointmentList.cshtml" />
+    <Content Include="Views\AdminAppointment\Details.cshtml" />
+    <Content Include="Views\AdminAppointment\Edit.cshtml" />
+    <Content Include="Views\AdminAppointment\Delete.cshtml" />
+    <Content Include="Views\AdminAppointment\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
