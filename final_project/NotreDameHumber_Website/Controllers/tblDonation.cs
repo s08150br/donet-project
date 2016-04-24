@@ -19,9 +19,11 @@ namespace NotreDameHumber_Website.Controllers
         [Required(ErrorMessage = "* Please include Name")]
         public string Name { get; set; }
 
+        [Range(1, 9999999999)]
         [Required(ErrorMessage = "* Please include Amount")]
         public Nullable<decimal> Amount { get; set; }
 
+        [EmailAddress(ErrorMessage = "The email address is not valid")]
         [Required(ErrorMessage = "* Please include Email")]
         public string Email { get; set; }
 

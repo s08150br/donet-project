@@ -51,7 +51,6 @@ namespace NotreDameHumber_Website.Controllers
         }
 
 
-
         // Create_user (Unregistered or registered user)
         public ActionResult Create_user()
         {

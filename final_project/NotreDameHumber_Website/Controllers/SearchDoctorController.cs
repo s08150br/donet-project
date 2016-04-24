@@ -15,24 +15,38 @@ namespace NotreDameHumber_Website.Controllers
         private HDHDBContext db = new HDHDBContext();
 
         // Index_admin (Admin page)
-        public ActionResult Index_admin()
+        public ActionResult Index_admin(string SearchBy, string search)
         {
-            var doctors = from p in db.tblDoctors
-                          orderby p.Name ascending
-                          select p;
-
-            return View(doctors);
+            if (SearchBy == "Name")
+            {
+                return View(db.tblDoctors.Where(x => x.Name.Contains(search) || search == null).OrderBy(x => x.Name).ToList());
+            }
+            else if (SearchBy == "Specialization")
+            {
+                return View(db.tblDoctors.Where(x => x.Specialization.Contains(search) || search == null).OrderBy(x => x.Name).ToList());
+            }
+            else
+            {
+                return View(db.tblDoctors.Where(x => x.Department.Contains(search) || search == null).OrderBy(x => x.Name).ToList());
+            }
         }
 
 
         // Index_user (Unregistered or registered user)
-        public ActionResult Index_user()
+        public ActionResult Index_user(string SearchBy, string search)
         {
-            var doctors = from p in db.tblDoctors
-                          orderby p.Name ascending
-                          select p;
-
-            return View(doctors);
+            if (SearchBy == "Name")
+            {
+                return View(db.tblDoctors.Where(x => x.Name.Contains(search) || search == null).OrderBy(x => x.Name).ToList());
+            }
+            else if (SearchBy == "Specialization")
+            {
+                return View(db.tblDoctors.Where(x => x.Specialization.Contains(search) || search == null).OrderBy(x => x.Name).ToList());
+            }
+            else
+            {
+                return View(db.tblDoctors.Where(x => x.Department.Contains(search) || search == null).OrderBy(x => x.Name).ToList());
+            }
         }
 
         // Details_user (Unregistered or registered user)
