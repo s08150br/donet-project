@@ -436,6 +436,12 @@
     <Content Include="Views\AdminAppointment\Edit.cshtml" />
     <Content Include="Views\AdminAppointment\Delete.cshtml" />
     <Content Include="Views\AdminAppointment\Create.cshtml" />
+    <Content Include="Views\Shared\_HeaderMenu.cshtml" />
+    <Content Include="Views\Menus\Index.cshtml" />
+    <Content Include="Views\Menus\Details.cshtml" />
+    <Content Include="Views\Menus\Create.cshtml" />
+    <Content Include="Views\Menus\Edit.cshtml" />
+    <Content Include="Views\Menus\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -445,7 +451,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\uploads\" />
-    <Folder Include="Views\Menus\" />
     <Folder Include="Views\test\" />
   </ItemGroup>
   <ItemGroup>

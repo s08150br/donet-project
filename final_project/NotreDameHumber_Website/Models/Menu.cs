@@ -11,13 +11,21 @@ namespace NotreDameHumber_Website.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Menu
     {
+        [Key]
         public int Id { get; set; }
+        [Required(ErrorMessage = "Please enter a name for the menu link.")]
+        [RegularExpression(@"^([ \u00c0-\u01ffa-zA-Z'\-])+$", ErrorMessage = "Please enter upper and lower case alphabets only.")]
         public string Name { get; set; }
         public Nullable<int> ParentId { get; set; }
+        [RegularExpression(@"^([ \u00c0-\u01ffa-zA-Z'\-])+$", ErrorMessage = "Please enter upper and lower case alphabets only.")]
+        [Required(ErrorMessage = "Please enter a action for the menu link.")]
         public string Action { get; set; }
+        [RegularExpression(@"^([ \u00c0-\u01ffa-zA-Z'\-])+$", ErrorMessage = "Please enter upper and lower case alphabets only.")]
+        [Required(ErrorMessage = "Please enter related controller for the menu link.")]
         public string Controller { get; set; }
     }
 }
