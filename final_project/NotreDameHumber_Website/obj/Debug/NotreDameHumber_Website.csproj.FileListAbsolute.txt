@@ -224,3 +224,7 @@ C:\Users\Fatemeh\Desktop\donet-project\final_project\NotreDameHumber_Website\bin
 C:\Users\Fatemeh\Desktop\donet-project\final_project\NotreDameHumber_Website\bin\PagedList.Mvc.dll
 C:\Users\Fatemeh\Desktop\donet-project\final_project\NotreDameHumber_Website\bin\PagedList.xml
 C:\Users\Fatemeh\Desktop\donet-project\final_project\NotreDameHumber_Website\bin\PagedList.Mvc.xml
+C:\Users\susan\Documents\GitHub\donet-project\final_project\NotreDameHumber_Website\bin\PagedList.dll
+C:\Users\susan\Documents\GitHub\donet-project\final_project\NotreDameHumber_Website\bin\PagedList.Mvc.dll
+C:\Users\susan\Documents\GitHub\donet-project\final_project\NotreDameHumber_Website\bin\PagedList.xml
+C:\Users\susan\Documents\GitHub\donet-project\final_project\NotreDameHumber_Website\bin\PagedList.Mvc.xml
