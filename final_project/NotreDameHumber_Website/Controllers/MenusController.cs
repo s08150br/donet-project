@@ -15,6 +15,7 @@ namespace NotreDameHumber_Website.Controllers
         // GET: Menus
         public ActionResult Index()
         {
+
             return View(db.Menus.ToList());
         }
         public void FindChildMenu(int id)
@@ -36,6 +37,8 @@ namespace NotreDameHumber_Website.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Menu menu = db.Menus.Find(id);
+            //Menu menu2 = db.Menus.Find(menu.ParentId);
+            //ViewBag.MenuLink = menu2.Name;
             if (menu == null)
             {
                 return HttpNotFound();
@@ -46,6 +49,7 @@ namespace NotreDameHumber_Website.Controllers
         // GET: Menus/Create
         public ActionResult Create()
         {
+            ViewBag.Parents = db.Menus;
             return View();
         }
 
@@ -56,8 +60,10 @@ namespace NotreDameHumber_Website.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,MenuName,ParentId,Action,Controller")] Menu menu)
         {
+            ViewBag.Parents = db.Menus;
             if (ModelState.IsValid)
             {
+               
                 db.Menus.Add(menu);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -69,6 +75,7 @@ namespace NotreDameHumber_Website.Controllers
         // GET: Menus/Edit/5
         public ActionResult Edit(int? id)
         {
+            ViewBag.Parents = db.Menus;
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -88,6 +95,7 @@ namespace NotreDameHumber_Website.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,MenuName,ParentId,Action,Controller")] Menu menu)
         {
+            ViewBag.Parents = db.Menus;
             if (ModelState.IsValid)
             {
                 db.Entry(menu).State = EntityState.Modified;
@@ -105,6 +113,9 @@ namespace NotreDameHumber_Website.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Menu menu = db.Menus.Find(id);
+            //int? parentId = menu.ParentId;
+            //Menu menu2 =db.Menus.Find(parentId);
+            //ViewBag.MenuLink = menu2.Name;
             if (menu == null)
             {
                 return HttpNotFound();

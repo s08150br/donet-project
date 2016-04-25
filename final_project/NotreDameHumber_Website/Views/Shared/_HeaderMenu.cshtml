@@ -1,0 +1,47 @@
+﻿@*@model NotreDameHumber_Website.Models.Menu*@
+
+@model IEnumerable<NotreDameHumber_Website.Models.Menu>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    @helper DisplayChildren(string action, string controller, string menuname, int id)
+    {
+    <ul class="dropdown-menu">
+        @foreach (var sm in Model)
+        {
+        if (sm.ParentId == id)
+        {
+        @Html.Action("FindChildMenu", "Menus", new { id = sm.Id })
+        if ((int)TempData["Count"] > 0)
+        {
+        <li class="dropdown-submenu">
+            <a href="@Url.Action(sm.Action, sm.Controller)">@sm.Name</a>
+            @DisplayChildren(sm.Action, sm.Controller, sm.Name, sm.Id)
+        </li>
+        }
+        else
+        {
+        <li><a href="@Url.Action(sm.Action, sm.Controller)">@sm.Name </a></li>
+        }
+        }
+        }
+    </ul>
+    }
+    @foreach (var m in Model)
+    {
+    if (m.ParentId == null)
+    {
+    @Html.Action("FindChildMenu", "Menus", new { id = m.Id })
+    if ((int)TempData["Count"] > 0)
+    {
+    <li class="dropdown">
+        <a href="@Url.Action(m.Action,m.Controller)" class="dropdown-toggle" data-toggle="dropdown">@m.Name<b class="caret"></b></a>
+
+        @DisplayChildren(m.Action, m.Controller, m.Name, m.Id)
+
+    </li>
+    }
+    else
+    {
+    <li><a href="@Url.Action(m.Action,m.Controller)">@m.Name</a></li>
+    }
+    }
+    }

@@ -217,7 +217,6 @@ C:\Users\Fatemeh\Desktop\donet-project\final_project\NotreDameHumber_Website\bin
 C:\Users\Fatemeh\Desktop\donet-project\final_project\NotreDameHumber_Website\bin\System.Web.Webpages.Razor.xml
 C:\Users\Fatemeh\Desktop\donet-project\final_project\NotreDameHumber_Website\bin\System.Web.Helpers.xml
 C:\Users\Fatemeh\Desktop\donet-project\final_project\NotreDameHumber_Website\bin\System.Web.Mvc.xml
-C:\Users\Fatemeh\Desktop\donet-project\final_project\NotreDameHumber_Website\obj\Debug\NotreDameHumber_Website.csprojResolveAssemblyReference.cache
 C:\Users\Fatemeh\Desktop\donet-project\final_project\NotreDameHumber_Website\obj\Debug\NotreDameHumber_Website.dll
 C:\Users\Fatemeh\Desktop\donet-project\final_project\NotreDameHumber_Website\obj\Debug\NotreDameHumber_Website.pdb
 C:\Users\Fatemeh\Desktop\donet-project\final_project\NotreDameHumber_Website\bin\PagedList.dll
