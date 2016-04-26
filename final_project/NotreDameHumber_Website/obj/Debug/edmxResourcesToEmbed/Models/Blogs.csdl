@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BlogModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Publish" Type="Boolean" />
+    <Property Name="PublishDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Comments" Relationship="Self.FK_Comment_ToTable" FromRole="Blog" ToRole="Comment" />
+  </EntityType>
+  <EntityType Name="BlogAdmin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Publish" Type="Boolean" />
+    <Property Name="BlogId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Blog" Relationship="Self.FK_Comment_ToTable" FromRole="Comment" ToRole="Blog" />
+  </EntityType>
+  <Association Name="FK_Comment_ToTable">
+    <End Role="Blog" Type="Self.Blog" Multiplicity="0..1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Blog">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="BlogId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BlogContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Blogs" EntityType="Self.Blog" />
+    <EntitySet Name="BlogAdmins" EntityType="Self.BlogAdmin" />
+    <EntitySet Name="Comments" EntityType="Self.Comment" />
+    <AssociationSet Name="FK_Comment_ToTable" Association="Self.FK_Comment_ToTable">
+      <End Role="Blog" EntitySet="Blogs" />
+      <End Role="Comment" EntitySet="Comments" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

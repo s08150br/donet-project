@@ -107,6 +107,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\BlogTemp.mdf" />
+    <Content Include="App_Data\BlogTemp_log.ldf">
+      <DependentUpon>BlogTemp.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\HDHDB.mdf" />
     <Content Include="App_Data\HDHDB_log.ldf">
       <DependentUpon>HDHDB.mdf</DependentUpon>
@@ -158,6 +162,16 @@
       <DependentUpon>Appointment.edmx</DependentUpon>
       <LastGenOutput>Appointment1.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\Blogs.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Blogs.edmx</DependentUpon>
+      <LastGenOutput>Blogs.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Blogs.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Blogs.edmx</DependentUpon>
+      <LastGenOutput>Blogs.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Menus.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Menus.edmx</DependentUpon>
@@ -191,6 +205,13 @@
     <Content Include="Models\Menus.edmx.diagram">
       <DependentUpon>Menus.edmx</DependentUpon>
     </Content>
+    <EntityDeploy Include="Models\Blogs.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Blogs.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Blogs.edmx.diagram">
+      <DependentUpon>Blogs.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -212,6 +233,7 @@
     </Compile>
     <Compile Include="Controllers\AdminEventsController.cs" />
     <Compile Include="Controllers\AdminViewController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\DisplayEventsController.cs" />
     <Compile Include="Controllers\Doctor.cs">
@@ -304,6 +326,31 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Appointment.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Blog.cs">
+      <DependentUpon>Blogs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BlogAdmin.cs">
+      <DependentUpon>Blogs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Blogs.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Blogs.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Blogs.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Blogs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Blogs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Blogs.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BlogViewModel.cs" />
+    <Compile Include="Models\Comment.cs">
+      <DependentUpon>Blogs.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DBContext.cs" />
     <Compile Include="Models\GetDataPaypal1.cs" />
@@ -442,6 +489,19 @@
     <Content Include="Views\Menus\Edit.cshtml" />
     <Content Include="Views\Menus\Delete.cshtml" />
     <Content Include="Views\Menus\Create.cshtml" />
+    <Content Include="Views\Blog\Admin.cshtml" />
+    <Content Include="Views\Blog\Comments.cshtml" />
+    <Content Include="Views\Blog\Create.cshtml" />
+    <Content Include="Views\Blog\Delete.cshtml" />
+    <Content Include="Views\Blog\Details.cshtml" />
+    <Content Include="Views\Blog\Edit.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\Login.cshtml" />
+    <Content Include="Views\Blog\Logout.cshtml" />
+    <Content Include="Views\Blog\RemoveComment.cshtml" />
+    <Content Include="Views\Blog\SingleComment.cshtml" />
+    <Content Include="Views\Shared\_blog_list_comments.cshtml" />
+    <Content Include="Views\Shared\_blog_make_comments.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
