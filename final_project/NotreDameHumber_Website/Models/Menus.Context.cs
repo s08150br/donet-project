@@ -26,5 +26,7 @@ namespace NotreDameHumber_Website.Models
         }
     
         public virtual DbSet<Menu> Menus { get; set; }
+
+        public System.Data.Entity.DbSet<NotreDameHumber_Website.Models.AlexAdmin> AlexAdmins { get; set; }
     }
 }

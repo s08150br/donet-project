@@ -287,6 +287,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AlexAdmin.cs" />
+    <Compile Include="Models\AlexAdminContext.cs" />
     <Compile Include="Models\Appointment.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -442,6 +444,7 @@
     <Content Include="Views\Menus\Edit.cshtml" />
     <Content Include="Views\Menus\Delete.cshtml" />
     <Content Include="Views\Menus\Create.cshtml" />
+    <Content Include="Views\Faq\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NotreDameHumber_Website.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -12,6 +13,35 @@ namespace NotreDameHumber_Website.Controllers
     public class FaqController : Controller
     {
         private HDHDBContext db = new HDHDBContext();
+        private AlexAdminContext AA = new AlexAdminContext();
+
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(AlexAdmin alexAdmin)
+        {
+            var admn = AA.AlexAdmins.Where(a => a.Username == alexAdmin.Username && a.Password == alexAdmin.Password).FirstOrDefault();
+            if(admn != null)
+            {
+                Session["AlexAdmin"] = alexAdmin.Username.ToString();
+                return RedirectToAction("Index_admin");
+            }
+            else
+            {
+                ModelState.AddModelError("", "Username or Password were incorrect");
+            }
+            return View();
+        }
+
+
+        
+
+
+
 
         // Index_admin (Admin page)
         public ActionResult Index_admin()
