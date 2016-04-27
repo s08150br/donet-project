@@ -148,6 +148,16 @@
     <Content Include="Images\logo-01.png" />
     <Content Include="Images\parking.JPG" />
     <Content Include="Images\spinner.gif" />
+    <Content Include="Models\AddNewPage.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AddNewPage.edmx</DependentUpon>
+      <LastGenOutput>AddNewPage.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AddNewPage.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AddNewPage.edmx</DependentUpon>
+      <LastGenOutput>AddNewPage.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Appointment.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Appointment.edmx</DependentUpon>
@@ -191,6 +201,13 @@
     <Content Include="Models\Menus.edmx.diagram">
       <DependentUpon>Menus.edmx</DependentUpon>
     </Content>
+    <EntityDeploy Include="Models\AddNewPage.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AddNewPage.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AddNewPage.edmx.diagram">
+      <DependentUpon>AddNewPage.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -206,6 +223,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AddNewPageController.cs" />
     <Compile Include="Controllers\AdminAppointmentController.cs" />
     <Compile Include="Controllers\AdminEvent.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
@@ -287,6 +305,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AddNewPage.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddNewPage.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddNewPage.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddNewPage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AddNewPage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddNewPage.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\AlexAdmin.cs" />
     <Compile Include="Models\AlexAdminContext.cs" />
     <Compile Include="Models\Appointment.Context.cs">
@@ -330,6 +363,9 @@
     <Compile Include="Models\Newsletter.cs" />
     <Compile Include="Models\NewsLetterContext.cs" />
     <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Page.cs">
+      <DependentUpon>AddNewPage.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Parking1.cs" />
     <Compile Include="Models\Service.cs">
       <DependentUpon>Appointment.tt</DependentUpon>
@@ -454,6 +490,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\uploads\" />
+    <Folder Include="Views\AddNewPage\" />
     <Folder Include="Views\test\" />
   </ItemGroup>
   <ItemGroup>
