@@ -8,9 +8,9 @@
     <Property Name="EventName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="StartTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="EndTime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" />
+    <Property Name="StartTime" Type="Time" />
+    <Property Name="EndTime" Type="Time" />
     <Property Name="Fee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ContactEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />

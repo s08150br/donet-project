@@ -16,13 +16,13 @@
     <header class="container">
         <div class="row">
 
-            @* header - left column - logo*@ 
+            @* header - left column - logo*@
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <a href="/Home/Index.cshtml"><img src="~/Images/logo-01.png" /></a>
-             
-            </div>            
 
-            @* header - right column *@   
+            </div>
+
+            @* header - right column *@
             <div class="col-md-8 text-right">
                 @Html.ActionLink("Donate", "Create_user", "Donation", new { area = "" }, new { @class = "btn" })
 
@@ -35,95 +35,95 @@
                         </div>
                     </div>
                 </form>
-            </div>                
-        </div>        
+            </div>
+        </div>
     </header>
-    
+
     <nav class="navbar navbar-inverse">
-      <div class="container">            
-            
+        <div class="container">
+
             <!--Navigation Hamburger-->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>              
+                </button>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @*@{Html.RenderAction("TopMenu", "Menus");}*@
                 </ul>
             </div>
-         
-  <!--Main Nav-->
- 
+
+            <!--Main Nav-->
+
             <div class="collapse navbar-collapse" id="mainNavBar">
                 <ul class="nav navbar-nav">
                     @{Html.RenderAction("TopMenu", "Menus");}
-<!--
-                    <li><a href="Index">Home</a></li>
+                    <!--
+                                        <li><a href="Index">Home</a></li>
 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Healthcare Professionals<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">sub1</a></li>
-                            <li><a href="#">sub2</a></li>
-                            <li><a href="#">sub3</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Department<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">sub1</a></li>
-                            <li><a href="#">sub2</a></li>
-                            <li><a href="#">sub3</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Patients and Visitors<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">sub1</a></li>
-                            <li><a href="#">sub2</a></li>
-                            <li><a href="#">sub3</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">sub1</a></li>
-                            <li><a href="#">sub2</a></li>
-                            <li><a href="#">sub3</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Careers<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Job Posting", "Index", "JobPost", new { area = "" }, new { @class = "" })</li>
-                            <li><a href="#">sub1</a></li>
-                            <li><a href="#">sub2</a></li>
-                            <li><a href="#">sub3</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Foundation<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">sub1</a></li>
-                            <li><a href="#">sub2</a></li>
-                            <li><a href="#">sub3</a></li>
-                        </ul>
-                    </li>
--->
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Healthcare Professionals<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">sub1</a></li>
+                                                <li><a href="#">sub2</a></li>
+                                                <li><a href="#">sub3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Department<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">sub1</a></li>
+                                                <li><a href="#">sub2</a></li>
+                                                <li><a href="#">sub3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Patients and Visitors<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">sub1</a></li>
+                                                <li><a href="#">sub2</a></li>
+                                                <li><a href="#">sub3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">sub1</a></li>
+                                                <li><a href="#">sub2</a></li>
+                                                <li><a href="#">sub3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Careers<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li>@Html.ActionLink("Job Posting", "Index", "JobPost", new { area = "" }, new { @class = "" })</li>
+                                                <li><a href="#">sub1</a></li>
+                                                <li><a href="#">sub2</a></li>
+                                                <li><a href="#">sub3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Foundation<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">sub1</a></li>
+                                                <li><a href="#">sub2</a></li>
+                                                <li><a href="#">sub3</a></li>
+                                            </ul>
+                                        </li>
+                    -->
                 </ul>
             </div>
-       
 
-       </div>
+
+        </div>
     </nav>
 
     <!--Side Navigation-->
     <aside class="container-fluid">
-         <div class="row">
+        <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <div class="sidebar-nav">
                     <ul class="sideNavigation">
@@ -131,10 +131,10 @@
                         <li><a href="ProgramsAndServices">Programs and Services</a></li>
                         <li><a href="ContactUs">Contact Us</a></li>
                         <li><a href="FindUs">Find Us</a></li>
-                        <li>@Html.ActionLink("Find a Doctor", "Index_user", "SearchDoctor", new { area = "" }, new { @class = "" })</li>                        
+                        <li>@Html.ActionLink("Find a Doctor", "Index_user", "SearchDoctor", new { area = "" }, new { @class = "" })</li>
                         <li><a href="VisitingPatients">Visiting Patients</a></li>
-                        <li><a href="HealthInformation">Health Information</a></li>             
-                        <li>@Html.ActionLink("Events", "Index", "DisplayEvents", new { area = "" }, new { @class = "" })</li>                      
+                        <li><a href="HealthInformation">Health Information</a></li>
+                        <li>@Html.ActionLink("Events", "Index", "DisplayEvents", new { area = "" }, new { @class = "" })</li>
                         <li>@Html.ActionLink("Subscribe to Newsletter", "Create", "Newsletter", new { area = "" }, new { @class = "" })</li>
                         <li>@Html.ActionLink("Donate", "Create_user", "Donation", new { area = "" }, new { @class = "" })</li>
                     </ul>
@@ -148,18 +148,18 @@
     </aside>
     <footer class="panel-footer">
         <ul>
-           <li><a href="#">Contact Us</a></li>|
+            <li><a href="#">Contact Us</a></li>|
             <li>@Html.ActionLink("Site Map", "Index", "ParkingMap", new { area = "" }, new { @class = "" })</li>|
             <li>@Html.ActionLink("FAQ", "Index_user", "FAQ", new { area = "" }, new { @class = "" })</li>
             <li>@Html.ActionLink("Feedback", "Create", "Feedback", new { area = "" }, new { @class = "" })</li>|
             <li><a href="#">Accessibility </a></li>|
             <li><a href="#">Privacy Policy</a></li>|
             <li><a href="#">Terms of Use</a></li>
-            <li></li>
+            <li>@Html.ActionLink("Admin", "Index", "AdminView", new { area = "" }, new {@class = "" })</li>
         </ul>
-       
-            <p>&copy; @DateTime.Now.Year - NotreDame Humber</p>
-          
+
+        <p>&copy; @DateTime.Now.Year - NotreDame Humber</p>
+
     </footer>
 </body>
 </html>
