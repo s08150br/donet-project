@@ -13,10 +13,10 @@ namespace NotreDameHumber_Website.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AddNewPageContext : DbContext
+    public partial class AddNewPage : DbContext
     {
-        public AddNewPageContext()
-            : base("name=AddNewPageContext")
+        public AddNewPage()
+            : base("name=AddNewPage")
         {
         }
     

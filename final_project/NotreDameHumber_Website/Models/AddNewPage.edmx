@@ -33,7 +33,7 @@
           <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MenuId" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="AddNewPageContext" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="AddNewPage" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Pages" EntityType="Self.Page" />
         </EntityContainer>
       </Schema>
@@ -41,7 +41,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="AddNewPageContext">
+        <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="AddNewPage">
           <EntitySetMapping Name="Pages">
             <EntityTypeMapping TypeName="Models.Page">
               <MappingFragment StoreEntitySet="Pages">

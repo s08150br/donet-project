@@ -10,7 +10,7 @@
     <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MenuId" Type="Int32" />
   </EntityType>
-  <EntityContainer Name="AddNewPageContext" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="AddNewPage" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Pages" EntityType="Self.Page" />
   </EntityContainer>
 </Schema>

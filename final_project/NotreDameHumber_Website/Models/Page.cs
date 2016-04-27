@@ -11,20 +11,11 @@ namespace NotreDameHumber_Website.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.ComponentModel.DataAnnotations;
-    using System.Web.Mvc;
-
+    
     public partial class Page
     {
-        [Key]
         public int Id { get; set; }
-        [DisplayName("Page Name")]
-        [Required(ErrorMessage = "Please enter a name for the page.")]
-        [RegularExpression(@"^([ \u00c0-\u01ffa-zA-Z'\-])+$", ErrorMessage = "Please enter upper and lower case alphabets only.")]
         public string Title { get; set; }
-        [AllowHtml]
-        [Required(ErrorMessage = "Please enter the page content.")]
         public string BodyContent { get; set; }
         public string Author { get; set; }
         public Nullable<int> MenuId { get; set; }
