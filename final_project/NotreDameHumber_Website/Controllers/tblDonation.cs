@@ -11,28 +11,15 @@ namespace NotreDameHumber_Website.Controllers
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
+    
     public partial class tblDonation
     {
         public int DonationId { get; set; }
-
-        [Required(ErrorMessage = "* Please include Name")]
         public string Name { get; set; }
-
-        [Range(1, 9999999999)]
-        [Required(ErrorMessage = "* Please include Amount")]
         public Nullable<decimal> Amount { get; set; }
-
-        [EmailAddress(ErrorMessage = "The email address is not valid")]
-        [Required(ErrorMessage = "* Please include Email")]
         public string Email { get; set; }
-
-        [Required(ErrorMessage = "* Please include Address")]
         public string Address { get; set; }
-
-        [Required(ErrorMessage = "* Please include Phone")]
         public string Phone { get; set; }
-
         public Nullable<System.DateTime> Regdate { get; set; }
     }
 }

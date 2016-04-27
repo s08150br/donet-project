@@ -4,21 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b922ca0c50e042b7aa268870d20b98cd" Name="Diagram1">
-        <EntityTypeShape EntityType="Models.AdminEvent" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.Donation" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.Event" Width="1.5" PointX="2.5" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.EventUser" Width="1.5" PointX="4.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Models.Doctor" Width="1.5" PointX="3.75" PointY="3.75" />
-        <EntityTypeShape EntityType="Models.FAQ" Width="1.5" PointX="5.75" PointY="3.75" />
-        <EntityTypeShape EntityType="Models.FeedBack" Width="1.5" PointX="2.5" PointY="7" />
-        <EntityTypeShape EntityType="Models.Parking" Width="1.5" PointX="0.625" PointY="7" />
-        <EntityTypeShape EntityType="Models.NewsLetter" Width="1.5" PointX="6.375" PointY="0.75" />
-        <EntityTypeShape EntityType="Models.Job" Width="1.5" PointX="4.5" PointY="7" />
-        <EntityTypeShape EntityType="Models.Worker" Width="1.5" PointX="7.375" PointY="6.75" />
-        <EntityTypeShape EntityType="Models.tblDoctor" Width="1.5" PointX="5" PointY="11.75" />
-        <EntityTypeShape EntityType="Models.tblDonation" Width="1.5" PointX="1.75" PointY="11.75" />
-        <EntityTypeShape EntityType="Models.tblFAQ" Width="1.5" PointX="3.375" PointY="11.75" />
+      <Diagram DiagramId="b922ca0c50e042b7aa268870d20b98cd" Name="Diagram1" ShowGrid="true" DisplayType="false">
+        <EntityTypeShape EntityType="Models.AdminEvent" Width="1.875" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Donation" Width="1.75" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Event" Width="1.875" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.EventUser" Width="1.5" PointX="3.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Doctor" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Models.FAQ" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Models.FeedBack" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Models.Parking" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Models.NewsLetter" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Models.Job" Width="1.5" PointX="4.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Models.Worker" Width="1.5" PointX="7.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Models.tblDoctor" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Models.tblDonation" Width="1.5" PointX="9.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Models.tblFAQ" Width="1.5" PointX="9.75" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

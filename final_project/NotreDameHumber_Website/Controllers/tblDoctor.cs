@@ -11,27 +11,15 @@ namespace NotreDameHumber_Website.Controllers
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
+    
     public partial class tblDoctor
     {
         public int DoctorId { get; set; }
-
-        [Required(ErrorMessage = "* Please include Name")]
         public string Name { get; set; }
-
-        [Required(ErrorMessage = "* Please include Specialization")]
         public string Specialization { get; set; }
-
-        [Required(ErrorMessage = "* Please include Department")]
         public string Department { get; set; }
-
-
         public string Photo { get; set; }
-
-        [Required(ErrorMessage = "* Please include Experience")]
         public string Experience { get; set; }
-
-        [Required(ErrorMessage = "* Please include Info")]
         public string Info { get; set; }
     }
 }

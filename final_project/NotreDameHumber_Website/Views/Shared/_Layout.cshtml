@@ -18,12 +18,14 @@
 
             @* header - left column - logo*@ 
             <div class="col-md-4 col-sm-4 col-xs-12">
-                <a href="~/Views/Home/Index.cshtml"><img src="~/Images/logo-01.png" /></a>
+                <a href="/Home/Index.cshtml"><img src="~/Images/logo-01.png" /></a>
+             
             </div>            
 
             @* header - right column *@   
             <div class="col-md-8 text-right">
-                <input type="button" class="btn" value="Donate" />
+                @Html.ActionLink("Donate", "Create_user", "Donation", new { area = "" }, new { @class = "btn" })
+
                 <input type="button" class="btn" value="francais" />
                 <form class="navbar-form" role="search">
                     <div class="input-group">
@@ -123,14 +125,12 @@
                         <li><a href="ProgramsAndServices">Programs and Services</a></li>
                         <li><a href="ContactUs">Contact Us</a></li>
                         <li><a href="FindUs">Find Us</a></li>
-                        <li><a href="FindADoctor">Find a Doctor</a></li>
+                        <li>@Html.ActionLink("Find a Doctor", "Index_user", "SearchDoctor", new { area = "" }, new { @class = "" })</li>                        
                         <li><a href="VisitingPatients">Visiting Patients</a></li>
-                        <li><a href="HealthInformation">Health Information</a></li>
-             
-                        <li>@Html.ActionLink("Events", "Index", "DisplayEvents", new { area = "" }, new { @class = "" })</li>
-                      
-                        <li><a href="Subscribe">Subscribe to Newsletters</a></li>
-                        <li><a href="Donate">Donate</a></li>
+                        <li><a href="HealthInformation">Health Information</a></li>             
+                        <li>@Html.ActionLink("Events", "Index", "DisplayEvents", new { area = "" }, new { @class = "" })</li>                      
+                        <li>@Html.ActionLink("Subscribe to Newsletter", "Create", "Newsletter", new { area = "" }, new { @class = "" })</li>
+                        <li>@Html.ActionLink("Donate", "Create_user", "Donation", new { area = "" }, new { @class = "" })</li>
                     </ul>
                 </div>
             </div>
@@ -144,7 +144,7 @@
         <ul>
            <li><a href="#">Contact Us</a></li>|
             <li>@Html.ActionLink("Site Map", "Index", "ParkingMap", new { area = "" }, new { @class = "" })</li>|
-            <li><a href="#">FAQ</a></li>|
+            <li>@Html.ActionLink("FAQ", "Index_user", "FAQ", new { area = "" }, new { @class = "" })</li>
             <li>@Html.ActionLink("Feedback", "Create", "Feedback", new { area = "" }, new { @class = "" })</li>|
             <li><a href="#">Accessibility </a></li>|
             <li><a href="#">Privacy Policy</a></li>|
