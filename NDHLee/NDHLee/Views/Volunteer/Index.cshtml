@@ -1,0 +1,33 @@
+﻿@model NDHLee.Models.Volunteer
+
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/volunteer.js"></script>
+<h2>Index</h2>
+
+<div class="row">
+    <div class="container">
+        <div class="col-lg-8">
+            <div id="vol_opening">
+                <b>@ViewBag.Message</b>
+                <h4>Why volunteer for us?</h4>
+                <p>Notre Dame is a great place to volunteer because...</p>
+                <input type="button" id="vol_opening__btn" value="Continue" />
+            </div>
+            <div id="vol_terms">
+                <h4>Terms and Conditions</h4>
+                <p>Terms and conditions go here.</p>
+                <input type="button" id="vol_terms__btn" value="I agree to the terms and want to apply"/>
+            </div>
+            <div id="vol_form">
+                @Html.Partial("_Volunteer_form")
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <h3>News</h3>
+            <p>News information goes here</p>
+        </div>
+    </div>
+</div>
+@Html.ActionLink("Admin", "Admin")
