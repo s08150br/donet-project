@@ -40,7 +40,7 @@
     </header>
     
     <nav class="navbar navbar-inverse">
-        <div class="container">          
+      <div class="container">            
             
             <!--Navigation Hamburger-->
             <div class="navbar-header">
@@ -52,13 +52,16 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    @{Html.RenderAction("TopMenu", "Menus");}
+                    @*@{Html.RenderAction("TopMenu", "Menus");}*@
                 </ul>
             </div>
-
-            <!--Main Nav-->
+         
+  <!--Main Nav-->
+ 
             <div class="collapse navbar-collapse" id="mainNavBar">
                 <ul class="nav navbar-nav">
+                    @{Html.RenderAction("TopMenu", "Menus");}
+<!--
                     <li><a href="Index">Home</a></li>
 
                     <li class="dropdown">
@@ -110,9 +113,12 @@
                             <li><a href="#">sub3</a></li>
                         </ul>
                     </li>
+-->
                 </ul>
             </div>
-        </div>
+       
+
+       </div>
     </nav>
 
     <!--Side Navigation-->
