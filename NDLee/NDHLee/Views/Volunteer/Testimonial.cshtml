@@ -1,0 +1,58 @@
+﻿@model IEnumerable<NDHLee.Models.Volunteer>
+@{
+    ViewBag.Title = "Volunteer Testimonials";
+}
+
+<h2>Testimonial</h2>
+
+<div class="row">
+    <div class="container">
+        <div class="col-lg-12">
+            @*@Ajax.ActionLink("All", "TestimonialsPublicAll", new AjaxOptions
+       {
+           HttpMethod = "GET", UpdateTargetId = "testimonials", InsertionMode = InsertionMode.Replace
+       })
+            <span> | </span>
+
+            @Ajax.ActionLink("Sort by first name", "TestimonialsPublicFirstAZ", new AjaxOptions
+       {
+           HttpMethod = "GET", UpdateTargetId = "testimonials", InsertionMode = InsertionMode.Replace
+       })
+            <span> | </span>
+
+            @Ajax.ActionLink("Sort by last name", "TestimonialsPublicLastAZ", new AjaxOptions
+       {
+           HttpMethod = "GET", UpdateTargetId = "testimonials", InsertionMode = InsertionMode.Replace
+       })
+            <div id="testimonials">
+
+            </div>*@
+@foreach (var item in Model)
+{
+            <div class="row">
+                <div class="col-md-3">
+                    <img alt="volunteer image" />
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <b>Name</b>: @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <b>Department</b>: @Html.DisplayFor(modelItem => item.Department)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            @Html.DisplayFor(modelItem => item.Testimonial)
+                        </div>
+                    </div>
+                </div>
+            </div>
+}
+            
+        </div>
+    </div>
+</div>
