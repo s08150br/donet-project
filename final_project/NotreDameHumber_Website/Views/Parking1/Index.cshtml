@@ -57,10 +57,13 @@
                new SelectListItem() {Text= "B", Value="2"}
            })
             </div>
+            <script>
+                alert("Please click 'pay right now' botton to checkout your payment")
+            </script>
 
             <button type="submit" class="btn btn-success">(1*) Submit</button>
-           //@Html.ActionLink("(2*)Pay Right Now", "Index", new { controller = "Paypal1" }, new { @class = "btn btn-primary" })
-            @Html.ActionLink("Submit", "Checkout", "Checkout", new { area= ""}, new { @class= "btn btn-primary"})
+           @Html.ActionLink("(2*)Pay Right Now", "Index", new { controller = "Paypal1" }, new { @class = "btn btn-primary" })
+            //paypal username : s08150br@gmail.com  password:liu1989
         }
         <div class="col-md-12">
             

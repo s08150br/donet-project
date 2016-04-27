@@ -309,3 +309,7 @@ C:\Users\Lee\Desktop\donet-project\final_project\NotreDameHumber_Website\bin\Sys
 C:\Users\Lee\Desktop\donet-project\final_project\NotreDameHumber_Website\obj\Debug\NotreDameHumber_Website.csprojResolveAssemblyReference.cache
 C:\Users\Lee\Desktop\donet-project\final_project\NotreDameHumber_Website\obj\Debug\NotreDameHumber_Website.dll
 C:\Users\Lee\Desktop\donet-project\final_project\NotreDameHumber_Website\obj\Debug\NotreDameHumber_Website.pdb
+C:\Users\bin\Documents\GitHub\donet-project\final_project\NotreDameHumber_Website\bin\PagedList.dll
+C:\Users\bin\Documents\GitHub\donet-project\final_project\NotreDameHumber_Website\bin\PagedList.Mvc.dll
+C:\Users\bin\Documents\GitHub\donet-project\final_project\NotreDameHumber_Website\bin\PagedList.xml
+C:\Users\bin\Documents\GitHub\donet-project\final_project\NotreDameHumber_Website\bin\PagedList.Mvc.xml
