@@ -280,6 +280,7 @@
     <Compile Include="Controllers\NewsLetter.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\NewsletterAdminController.cs" />
     <Compile Include="Controllers\NewsletterController.cs" />
     <Compile Include="Controllers\Parking.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>

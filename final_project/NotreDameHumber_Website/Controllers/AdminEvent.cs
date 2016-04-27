@@ -18,9 +18,9 @@ namespace NotreDameHumber_Website.Controllers
         public string EventName { get; set; }
         public string Description { get; set; }
         public string Address { get; set; }
-        public string Date { get; set; }
-        public string StartTime { get; set; }
-        public string EndTime { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
+        public Nullable<System.TimeSpan> StartTime { get; set; }
+        public Nullable<System.TimeSpan> EndTime { get; set; }
         public string Fee { get; set; }
         public string ContactEmail { get; set; }
         public string Phone { get; set; }
