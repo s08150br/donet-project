@@ -7,18 +7,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 middle">
-                    @Html.ActionLink("Create Event", "Index", "AdminEvents", new { @class = "btn btn-default" })
-                    @Html.ActionLink("Donation", "Index_admin", "Donation", new { @class = "btn btn-default" })
-                    @Html.ActionLink("FAQ Answers", "Index_with_answers_admin", "FAQ", new { @class = "btn btn-default" })
-                    @Html.ActionLink("FAQ Display", "Index_without_answers_admin", "FAQ", new { @class = "btn btn-default" })
-                    @Html.ActionLink("Feedback", "Index", "FeedbackAdmin", new { @class = "btn btn-default" })
-                    @Html.ActionLink("Create Jobs", "Index", "JobsAdmin", new { @class = "btn btn-default" })
+                    @Html.ActionLink("Create Event", "Index", "AdminEvents", new { area=""}, new { @class = "btn btn-default" })
+                    @Html.ActionLink("Donation", "Index_admin", "Donation", new { area = "" }, new { @class = "btn btn-default" })
+                    @Html.ActionLink("FAQ Answers", "Index_with_answers_admin", "FAQ", new { area = "" }, new { @class = "btn btn-default" })
+                    @Html.ActionLink("FAQ Display", "Index_without_answers_admin", "FAQ", new { area = "" }, new { @class = "btn btn-default" })
+                    @Html.ActionLink("Feedback", "Index", "FeedbackAdmin", new { area = "" }, new { @class = "btn btn-default" })
+                    @Html.ActionLink("Create Jobs", "Index", "JobsAdmin", new { area = "" }, new { @class = "btn btn-default" })
 
                 </div>
             </div>
         </div>
         <div class="col-md-9 col-sm-9 col-xs-12">
-            @RenderBody()
+       
         </div>
     </main>
 
