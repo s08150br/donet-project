@@ -19,6 +19,12 @@
         <EntityTypeShape EntityType="Models.tblDoctor" Width="1.5" PointX="9.75" PointY="0.75" />
         <EntityTypeShape EntityType="Models.tblDonation" Width="1.5" PointX="9.75" PointY="4.75" />
         <EntityTypeShape EntityType="Models.tblFAQ" Width="1.5" PointX="9.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Models.AlexAdmin" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="Models.Appointment" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Models.Menu" Width="1.5" PointX="2.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Models.Page" Width="1.5" PointX="4.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Models.Service" Width="1.5" PointX="12.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Models.Therapist" Width="1.5" PointX="6.75" PointY="12.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

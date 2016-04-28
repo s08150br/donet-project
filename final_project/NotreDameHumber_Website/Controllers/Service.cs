@@ -12,18 +12,10 @@ namespace NotreDameHumber_Website.Controllers
     using System;
     using System.Collections.Generic;
     
-    public partial class AdminEvent
+    public partial class Service
     {
-        public int EventId { get; set; }
-        public string EventName { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
-        public string Address { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
-        public Nullable<System.DateTime> StartTime { get; set; }
-        public Nullable<System.DateTime> EndTime { get; set; }
-        public string Fee { get; set; }
-        public string ContactEmail { get; set; }
-        public string Phone { get; set; }
-        public string EventWebsite { get; set; }
     }
 }

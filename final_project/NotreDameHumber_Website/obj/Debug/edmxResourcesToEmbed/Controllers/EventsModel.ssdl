@@ -16,6 +16,31 @@
     <Property Name="Phone" Type="varchar" MaxLength="50" />
     <Property Name="EventWebsite" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="AlexAdmin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Appointments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Firstname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lastname" Type="nvarchar" MaxLength="50" />
+    <Property Name="BirthDate" Type="date" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="PreferredDate" Type="date" />
+    <Property Name="PreferredTime" Type="time" Precision="7" />
+    <Property Name="Description" Type="text" />
+    <Property Name="Service" Type="int" />
+    <Property Name="Therapist" Type="int" />
+    <Property Name="Set" Type="char" MaxLength="4" />
+  </EntityType>
   <EntityType Name="Doctors">
     <Key>
       <PropertyRef Name="DoctorId" />
@@ -95,6 +120,16 @@
     <Property Name="LastName" Type="varchar" MaxLength="50" />
     <Property Name="Phone" Type="varchar" MaxLength="11" />
   </EntityType>
+  <EntityType Name="Menus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="Action" Type="nvarchar" MaxLength="50" />
+    <Property Name="Controller" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="NewsLetters">
     <Key>
       <PropertyRef Name="Id" />
@@ -103,6 +138,16 @@
     <Property Name="firstName" Type="varchar" MaxLength="50" />
     <Property Name="lastName" Type="varchar" MaxLength="50" />
     <Property Name="Email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Pages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="BodyContent" Type="text" />
+    <Property Name="Author" Type="nvarchar" MaxLength="50" />
+    <Property Name="MenuId" Type="int" />
   </EntityType>
   <EntityType Name="Parking">
     <Key>
@@ -114,6 +159,14 @@
     <Property Name="Hours" Type="time" Precision="7" />
     <Property Name="Email" Type="varchar" MaxLength="50" />
     <Property Name="Phone" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="text" />
   </EntityType>
   <EntityType Name="tblDoctors">
     <Key>
@@ -151,6 +204,19 @@
     <Property Name="Date" Type="date" />
     <Property Name="Status" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="Therapists">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Firstname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lastname" Type="nvarchar" MaxLength="50" />
+    <Property Name="LicenseNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="Expertise" Type="nvarchar" MaxLength="50" />
+    <Property Name="Experience" Type="int" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Info" Type="text" />
+  </EntityType>
   <EntityType Name="Worker">
     <Key>
       <PropertyRef Name="Id" />
@@ -165,6 +231,8 @@
   </EntityType>
   <EntityContainer Name="ModelsStoreContainer">
     <EntitySet Name="AdminEvents" EntityType="Self.AdminEvents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AlexAdmin" EntityType="Self.AlexAdmin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Appointments" EntityType="Self.Appointments" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Doctors" EntityType="Self.Doctors" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Donation" EntityType="Self.Donation" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Events" EntityType="Self.Events" Schema="dbo" store:Type="Tables" />
@@ -172,11 +240,15 @@
     <EntitySet Name="FAQ" EntityType="Self.FAQ" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FeedBack" EntityType="Self.FeedBack" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Job" EntityType="Self.Job" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menus" EntityType="Self.Menus" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NewsLetters" EntityType="Self.NewsLetters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pages" EntityType="Self.Pages" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Parking" EntityType="Self.Parking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblDoctors" EntityType="Self.tblDoctors" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblDonation" EntityType="Self.tblDonation" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblFAQ" EntityType="Self.tblFAQ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Therapists" EntityType="Self.Therapists" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Worker" EntityType="Self.Worker" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

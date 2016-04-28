@@ -228,8 +228,13 @@
     <Compile Include="Controllers\AdminEvent.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\AdminEventsController.cs" />
     <Compile Include="Controllers\AdminViewController.cs" />
+    <Compile Include="Controllers\AlexAdmin.cs">
+      <DependentUpon>EventsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Appointment.cs">
+      <DependentUpon>EventsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\DisplayEventsController.cs" />
     <Compile Include="Controllers\Doctor.cs">
@@ -276,12 +281,18 @@
     </Compile>
     <Compile Include="Controllers\JobPostController.cs" />
     <Compile Include="Controllers\JobsAdminController.cs" />
+    <Compile Include="Controllers\Menu.cs">
+      <DependentUpon>EventsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\MenusController.cs" />
     <Compile Include="Controllers\NewsLetter.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\NewsletterAdminController.cs" />
     <Compile Include="Controllers\NewsletterController.cs" />
+    <Compile Include="Controllers\Page.cs">
+      <DependentUpon>EventsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Parking.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -291,6 +302,9 @@
     <Compile Include="Controllers\PublicAppointmentController.cs" />
     <Compile Include="Controllers\RegisterEventController.cs" />
     <Compile Include="Controllers\SearchDoctorController.cs" />
+    <Compile Include="Controllers\Service.cs">
+      <DependentUpon>EventsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\tblDoctor.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
@@ -298,6 +312,9 @@
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\tblFAQ.cs">
+      <DependentUpon>EventsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Therapist.cs">
       <DependentUpon>EventsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Worker.cs">
@@ -396,11 +413,6 @@
     <Content Include="Views\Home\Subscribe.cshtml" />
     <Content Include="Views\Home\Donate.cshtml" />
     <Content Include="Views\Home\ProgramsAndServices.cshtml" />
-    <Content Include="Views\AdminEvents\Create.cshtml" />
-    <Content Include="Views\AdminEvents\Delete.cshtml" />
-    <Content Include="Views\AdminEvents\Details.cshtml" />
-    <Content Include="Views\AdminEvents\Edit.cshtml" />
-    <Content Include="Views\AdminEvents\Index.cshtml" />
     <Content Include="Views\Newsletter\Create.cshtml" />
     <Content Include="Views\Newsletter\Thankyou.cshtml" />
     <Content Include="Views\UserEvents\Create.cshtml" />

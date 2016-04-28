@@ -39,5 +39,11 @@ namespace NotreDameHumber_Website.Controllers
         public DbSet<tblDoctor> tblDoctors { get; set; }
         public DbSet<tblDonation> tblDonations { get; set; }
         public DbSet<tblFAQ> tblFAQs { get; set; }
+        public DbSet<AlexAdmin> AlexAdmins { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<Menu> Menus { get; set; }
+        public DbSet<Page> Pages { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<Therapist> Therapists { get; set; }
     }
 }
